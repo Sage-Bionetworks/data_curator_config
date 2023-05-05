@@ -59,6 +59,7 @@ jobs:
       - uses: fjogeleit/yaml-update-action@main
         with:
           commitChange: false
+          updateFile: true
           valueFile: schematic/config.yml
           changes: |
             {
