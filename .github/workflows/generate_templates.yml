@@ -71,7 +71,7 @@ jobs:
       - name: Test schematic
         run: |
           cd schematic
-          poetry run schematic manifest -c config.yml get -dt ${{ inputs.data_types }} -t ${{ inputs.data_types }}-oxlsx ../test.xlsx
+          poetry run schematic manifest -c config.yml get -dt ${{ inputs.data_types }} -t ${{ inputs.data_types }} -oxlsx ../test.xlsx
          
       - name: Open PR
         uses: peter-evans/create-pull-request@v5
