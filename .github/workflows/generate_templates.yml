@@ -56,7 +56,7 @@ jobs:
           
       - name: Download data model
         run: |
-          curl ${{ input.data_model }} > schematic/data-model.json
+          curl ${{ inputs.data_model }} > schematic/data-model.json
           
       - uses: fjogeleit/yaml-update-action@main
         with:
@@ -64,14 +64,14 @@ jobs:
           valueFile: schematic/config.yml
           changes: |
            {
-             "model.input.download_url": "${{ inputs.data_model }}",
-             "model.input.location": "${{ schematic/data-model.jsonld }}"
+             "model.inputs.download_url": "${{ inputs.data_model }}",
+             "model.inputs.location": "${{ schematic/data-model.jsonld }}"
            }
 
       - name: Test schematic
         run: |
           cd schematic
-          poetry run schematic manifest -c config.yml get -dt ${{ input.data_types }} -t ${{ input.data_types }}-oxlsx ../test.xlsx
+          poetry run schematic manifest -c config.yml get -dt ${{ inputs.data_types }} -t ${{ inputs.data_types }}-oxlsx ../test.xlsx
          
       - name: Open PR
         uses: peter-evans/create-pull-request@v5
