@@ -13,7 +13,7 @@ on:
         required: true
       data_types:
         description: One or more data types to create a template separated by a space
-        required: true
+        required: false
       template_directory:
         description: Directory to save the template files
         required: true
@@ -77,11 +77,23 @@ jobs:
       - name: Make template directory
         run: |
           mkdir -p ${{ inputs.template_directory }}
+          
+      - name: Set Configurations for Data Model
+        run: |
+         poetry run python3 .github/config_schema.py \
+           -c schematic/config.yml \
+           --service_repo 'Sage-Bionetworks/schematic' \
+           --overwrite
+           
+      - name: Get template types to generate
+        uses: sergeysova/jq-action@v2
+        id: data_types
+        cmd: 'jq [.manifest_schemas[].schema_name]'
 
       - name: Generate templates
         run: |
           cd schematic
-          for i in ${{ inputs.data_types }};
+          for i in ${{ steps.data_types.output.value }};
           do
             poetry run schematic manifest -c config.yml get -dt "$i" -oxlsx "../${{ inputs.template_directory }}/$i.xlsx"
           done
