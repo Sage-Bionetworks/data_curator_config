@@ -89,7 +89,7 @@ jobs:
            --overwrite
            
       - name: Get template types to generate
-        if: "${{ inputs.data_types != '' }}"
+        if: "${{ inputs.data_types == '' }}"
         id: data_types
         run: |
           sudo apt-get install jq
