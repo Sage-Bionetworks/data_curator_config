@@ -64,10 +64,10 @@ jobs:
           changes: |
             {
               "model.inputs.download_url": "${{ inputs.data_model }}",
-              "model.inputs.location": "schematic/data-model.jsonld"
+              "model.inputs.location": "data-model.jsonld"
             }
 
-      - name: Test schematic
+      - name: Generate templates
         run: |
           cd schematic
           for i in ${{ inputs.data_types }};
