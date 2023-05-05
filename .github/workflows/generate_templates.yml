@@ -8,7 +8,11 @@ on:
   workflow_dispatch:
     inputs:
       data_model:
+        description: URL to a jsonld data model file
+        required: true
       data_types:
+        description: One or more data types to create a template. Separated by a space
+        required: true
 
 jobs:
   generate-template-and-pr:
