@@ -1,0 +1,94 @@
+# ------------------------------------------------------------------------------
+# Generate template excel sheets from a data model using schematic
+# Then open a PR to incorporate them into the repo
+# ------------------------------------------------------------------------------
+name: generate-templates
+on:
+  repository_dispatch:
+    types: generate_templates
+  workflow_dispatch:
+    inputs:
+      data_model:
+        description: URL to a jsonld data model file
+        required: true
+      data_types:
+        description: One or more data types to create a template separated by a space
+        required: true
+      template_directory:
+        description: Directory to save the template files
+        required: true
+
+jobs:
+  generate-template-and-pr:
+    runs-on: ubuntu-latest
+    steps:        
+
+      - name: Checkout this repository
+        uses: actions/checkout@v3
+
+      - name: Checkout schematic
+        uses: actions/checkout@v3
+        with:
+          repository: 'Sage-Bionetworks/schematic'
+          path: './schematic'
+
+      - name: Install System Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pip
+
+      - name: Install python dependencies
+        run: pipx install poetry
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          cache: 'poetry'
+      - run: |
+          cd schematic
+          poetry install
+
+      - name: Set Configurations for Schematic
+        shell: bash
+        run: |
+          echo "${{ secrets.SCHEMATIC_SYNAPSE_CONFIG }}" > schematic/.synapseConfig
+
+      - name: Save service account credentials for Schematic
+        id: create-json
+        uses: jsdaniell/create-json@1.1.2
+        with:
+          name: 'schematic/schematic_service_account_creds.json'
+          json: ${{ secrets.SCHEMATIC_SERVICE_ACCT_CREDS }}
+          
+      - name: Download data model
+        run: |
+          curl ${{ inputs.data_model }} > schematic/data-model.jsonld
+          
+      - uses: fjogeleit/yaml-update-action@main
+        with:
+          commitChange: false
+          valueFile: schematic/config.yml
+          changes: |
+            {
+              "model.input.download_url": "${{ inputs.data_model }}",
+              "model.input.location": "data-model.jsonld"
+            }
+
+      - name: Make template directory
+        run: |
+          mkdir -p ${{ inputs.template_directory }}
+
+      - name: Generate templates
+        run: |
+          cd schematic
+          for i in ${{ inputs.data_types }};
+          do
+            poetry run schematic manifest -c config.yml get -dt "$i" -oxlsx "../${{ inputs.template_directory }}/$i.xlsx"
+          done
+         
+      - name: Open PR
+        uses: peter-evans/create-pull-request@v5
+        with:
+          add-paths: |
+            ${{ inputs.template_directory }}/*.xlsx
+      
