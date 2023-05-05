@@ -58,7 +58,7 @@ jobs:
           
       - name: Download data model
         run: |
-          curl ${{ inputs.data_model }} > schematic/data-model.json
+          curl ${{ inputs.data_model }} > schematic/data-model.jsonld
           
       - uses: fjogeleit/yaml-update-action@main
         with:
