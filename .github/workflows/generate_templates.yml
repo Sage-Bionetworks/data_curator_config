@@ -54,4 +54,4 @@ jobs:
       - name: Test schematic
         run: |
           cd schematic
-          poetry run schematic init -c schematic_config.yml
+          poetry run schematic manifest -c config.yml get -dt Patient -oxlsx test.xlsx
