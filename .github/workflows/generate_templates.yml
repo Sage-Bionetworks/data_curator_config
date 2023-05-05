@@ -40,4 +40,6 @@ jobs:
           poetry install
      
       - name: Test schematic
-        run: poetry run schematic init
+        run: |
+          cd schematic
+          poetry run schematic init
