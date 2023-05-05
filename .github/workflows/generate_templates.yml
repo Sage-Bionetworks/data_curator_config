@@ -63,12 +63,11 @@ jobs:
       - uses: fjogeleit/yaml-update-action@main
         with:
           commitChange: false
-          updateFile: true
           valueFile: schematic/config.yml
           changes: |
             {
-              "model.inputs.download_url": "${{ inputs.data_model }}",
-              "model.inputs.location": "data-model.jsonld"
+              "model.input.download_url": "${{ inputs.data_model }}",
+              "model.input.location": "data-model.jsonld"
             }
 
       - name: Generate templates
