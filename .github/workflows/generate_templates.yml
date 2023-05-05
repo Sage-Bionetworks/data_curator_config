@@ -58,5 +58,5 @@ jobs:
          
       - name: Open PR
         uses: peter-evans/create-pull-request@v5
-        add-paths: schematic/test.xlsx
+          add-paths: schematic/test.xlsx
       
