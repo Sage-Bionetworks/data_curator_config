@@ -11,7 +11,7 @@ on:
       data_types:
 
 jobs:
-  auto-open-pr:
+  generate-template-and-pr:
     runs-on: ubuntu-latest
     steps:        
       - name: Test
