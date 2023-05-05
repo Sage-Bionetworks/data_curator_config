@@ -71,7 +71,7 @@ jobs:
           cd schematic
           for (i in ${{ inputs.data_types }});
           do
-            poetry run schematic manifest -c config.yml get -dt $i -oxlsx '../%i.xlsx'
+            poetry run schematic manifest -c config.yml get -dt $i -oxlsx '../$i.xlsx'
           done
          
       - name: Open PR
