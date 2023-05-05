@@ -29,7 +29,7 @@ jobs:
           sudo apt-get install -y pip
           
       - name: Install python dependencies
-          run: pipx install poetry
+        run: pipx install poetry
 
       - uses: actions/setup-python@v4
         with:
