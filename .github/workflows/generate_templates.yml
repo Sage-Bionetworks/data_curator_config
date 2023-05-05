@@ -65,7 +65,7 @@ jobs:
           changes: |
             {
               "model.inputs.download_url": "${{ inputs.data_model }}",
-              "model.inputs.location": "${{ schematic/data-model.jsonld }}"
+              "model.inputs.location": "schematic/data-model.jsonld"
             }
 
       - name: Test schematic
