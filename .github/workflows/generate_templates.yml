@@ -85,6 +85,7 @@ jobs:
          poetry run python3 config_schema.py \
            -c config.yml \
            --service_repo 'Sage-Bionetworks/schematic' \
+           -o ../
            --overwrite
            
       - name: Get template types to generate
@@ -92,7 +93,7 @@ jobs:
         uses: sergeysova/jq-action@v2
         id: data_types
         with:
-          cmd: 'jq [.manifest_schemas[].schema_name] | join(" ")'
+          cmd: 'cat config.json | jq [.manifest_schemas[].schema_name] | join(" ")'
 
       - name: Generate templates
         run: |
