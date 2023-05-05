@@ -42,4 +42,4 @@ jobs:
       - name: Test schematic
         run: |
           cd schematic
-          poetry run schematic init
+          poetry run schematic init -c schematic_config.yml
