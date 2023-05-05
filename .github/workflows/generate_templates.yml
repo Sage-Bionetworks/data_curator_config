@@ -39,6 +39,18 @@ jobs:
           cd schematic
           poetry install
      
+      - name: Set Configurations for Schematic
+        shell: bash
+        run: |
+          echo "${{ secrets.SCHEMATIC_SYNAPSE_CONFIG }}" > schematic/.synapseConfig
+
+      - name: Save service account credentials for Schematic
+        id: create-json
+        uses: jsdaniell/create-json@1.2.2
+        with:
+          name: 'schematic/schematic_service_account_creds.json'
+          json: ${{ secrets.SCHEMATIC_SERVICE_ACCT_CREDS }}
+          
       - name: Test schematic
         run: |
           cd schematic
