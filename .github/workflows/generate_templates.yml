@@ -6,52 +6,57 @@ on:
   repository_dispatch:
     types: generate_templates
   workflow_dispatch:
-  
+
 jobs:
   auto-open-pr:
     runs-on: ubuntu-latest
-    steps:        
-      - name: Test
-        run: echo 'Successfully triggered workflow via repo dispatch!'
-        
-      - name: Checkout this repository
-        uses: actions/checkout@v3
+  steps:        
+    - name: Test
+      run: echo 'Successfully triggered workflow via repo dispatch!'
 
-      - name: Checkout schematic
-        uses: actions/checkout@v3
-        with:
-          repository: 'Sage-Bionetworks/schematic'
-          path: './schematic'
-          
-      - name: Install System Dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y pip
-          
-      - name: Install python dependencies
-        run: pipx install poetry
+    - name: Checkout this repository
+      uses: actions/checkout@v3
 
-      - uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-          cache: 'poetry'
-      - run: |
-          cd schematic
-          poetry install
-     
-      - name: Set Configurations for Schematic
-        shell: bash
-        run: |
-          echo "${{ secrets.SCHEMATIC_SYNAPSE_CONFIG }}" > schematic/.synapseConfig
+    - name: Checkout schematic
+      uses: actions/checkout@v3
+      with:
+        repository: 'Sage-Bionetworks/schematic'
+        path: './schematic'
 
-      - name: Save service account credentials for Schematic
-        id: create-json
-        uses: jsdaniell/create-json@1.1.2
-        with:
-          name: 'schematic/schematic_service_account_creds.json'
-          json: ${{ secrets.SCHEMATIC_SERVICE_ACCT_CREDS }}
-          
-      - name: Test schematic
-        run: |
-          cd schematic
-          poetry run schematic manifest -c config.yml get -dt Patient -oxlsx test.xlsx
+    - name: Install System Dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y pip
+
+    - name: Install python dependencies
+      run: pipx install poetry
+
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+       cache: 'poetry'
+    - run: |
+        cd schematic
+        poetry install
+
+    - name: Set Configurations for Schematic
+      shell: bash
+      run: |
+        echo "${{ secrets.SCHEMATIC_SYNAPSE_CONFIG }}" > schematic/.synapseConfig
+
+    - name: Save service account credentials for Schematic
+      id: create-json
+      uses: jsdaniell/create-json@1.1.2
+      with:
+        name: 'schematic/schematic_service_account_creds.json'
+        json: ${{ secrets.SCHEMATIC_SERVICE_ACCT_CREDS }}
+
+    - name: Test schematic
+      run: |
+        cd schematic
+        poetry run schematic manifest -c config.yml get -dt Patient -oxlsx test.xlsx
+         
+    - name: Open PR
+      uses: peter-evans/create-pull-request@v5
+      add-paths: schematic/test.xlsx
+      
