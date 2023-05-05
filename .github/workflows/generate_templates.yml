@@ -85,7 +85,7 @@ jobs:
          poetry run python3 config_schema.py \
            -c config.yml \
            --service_repo 'Sage-Bionetworks/schematic' \
-           -o ../
+           -o ../ \
            --overwrite
            
       - name: Get template types to generate
