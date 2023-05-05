@@ -89,16 +89,16 @@ jobs:
            --overwrite
            
       - name: Get template types to generate
-        if: "${{ inputs.template_directory != '' }}"
+        if: "${{ inputs.data_types != '' }}"
         id: data_types
         run: |
           sudo apt-get install jq
-          jq -r '[.manifest_schemas[].schema_name] | join(" ")' config.json
+          data_types=(jq -r '[.manifest_schemas[].schema_name] | join(" ")' config.json)
 
       - name: Generate templates
         run: |
           cd schematic
-          for i in ${{ steps.data_types.output.value }};
+          for i in $DATA_TYPES;
           do
             poetry run schematic manifest -c config.yml get -dt "$i" -oxlsx "../${{ inputs.template_directory }}/$i.xlsx"
           done
