@@ -17,6 +17,8 @@ on:
       template_directory:
         description: Directory to save the template files
         required: true
+    env:
+      data_types: ${{ inputs.data_types }}
 
 jobs:
   generate-template-and-pr:
@@ -89,16 +91,24 @@ jobs:
            --overwrite
            
       - name: Get template types to generate
-        if: "${{ inputs.template_directory != '' }}"
+        if: "${{ inputs.data_types != '' }}"
         uses: sergeysova/jq-action@v2
         id: data_types
         with:
-          cmd: 'cat config.json | jq [.manifest_schemas[].schema_name] | join(" ")'
+          cmd: 'jq [.manifest_schemas[].schema_name] | join(" ") -r config.json'
+          
+      - name: Update data_type variables
+        if: "${{ inputs.data_types != '' }}"
+        run: |
+          echo '${{ steps.data_types.output.value }} >> ${{ env.data_types }}'
+          echo jq output ${{ steps.data_types.output.value }}
+          echo inputs ${{ inputs.template_directory }}
+          echo ${{ env.data_types }}
 
       - name: Generate templates
         run: |
           cd schematic
-          for i in ${{ steps.data_types.output.value }};
+          for i in ${{ env.data_types }};
           do
             poetry run schematic manifest -c config.yml get -dt "$i" -oxlsx "../${{ inputs.template_directory }}/$i.xlsx"
           done
