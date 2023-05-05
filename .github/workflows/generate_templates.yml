@@ -54,10 +54,10 @@ jobs:
       - name: Test schematic
         run: |
           cd schematic
-          poetry run schematic manifest -c config.yml get -dt Patient -oxlsx test.xlsx
+          poetry run schematic manifest -c config.yml get -dt Patient -oxlsx ../test.xlsx
          
       - name: Open PR
         uses: peter-evans/create-pull-request@v5
         with:
-          add-paths: schematic/test.xlsx
+          add-paths: test.xlsx
       
