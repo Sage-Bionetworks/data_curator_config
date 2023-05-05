@@ -80,8 +80,9 @@ jobs:
           
       - name: Set Configurations for Data Model
         run: |
+         cp .github/config_schema.py schematic
          cd schematic
-         poetry run python3 ../.github/config_schema.py \
+         poetry run python3 config_schema.py \
            -c config.yml \
            --service_repo 'Sage-Bionetworks/schematic' \
            --overwrite
