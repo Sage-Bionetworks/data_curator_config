@@ -14,8 +14,6 @@ jobs:
   generate-template-and-pr:
     runs-on: ubuntu-latest
     steps:        
-      - name: Test
-        run: echo 'Successfully triggered workflow via repo dispatch!'
 
       - name: Checkout this repository
         uses: actions/checkout@v3
