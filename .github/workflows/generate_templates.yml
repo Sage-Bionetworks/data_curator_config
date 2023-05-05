@@ -39,3 +39,5 @@ jobs:
           cd schematic
           poetry install
      
+     - name: Test schematic
+       run: poetry run schematic init
