@@ -1,0 +1,15 @@
+# ------------------------------------------------------------------------------
+# Generate template excel sheets from a data model using schematic
+# ------------------------------------------------------------------------------
+name: generate-templates
+on:
+  repository_dispatch:
+    types: generate_templates
+  workflow_dispatch:
+  
+jobs:
+  auto-open-pr:
+    runs-on: ubuntu-latest
+    steps:        
+      - name: Test
+        run: echo 'Successfully triggered workflow via repo dispatch!'
