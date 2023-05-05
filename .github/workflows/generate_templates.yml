@@ -13,3 +13,24 @@ jobs:
     steps:        
       - name: Test
         run: echo 'Successfully triggered workflow via repo dispatch!'
+        
+      - name: Checkout this repository
+        uses: actions/checkout@v3
+
+      - name: Checkout schematic
+       uses: actions/checkout@v3
+       with:
+         repository: 'Sage-Bionetworks/schematic'
+         path: './schematic'
+           - name: Install System Dependencies
+        run: |
+          sudo apt-get update
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          cache: 'poetry'
+      - run: |
+          cd schematic
+          poetry install
+     
