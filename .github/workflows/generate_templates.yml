@@ -6,6 +6,9 @@ on:
   repository_dispatch:
     types: generate_templates
   workflow_dispatch:
+    inputs:
+      data_model:
+      data_types:
 
 jobs:
   auto-open-pr:
@@ -50,11 +53,25 @@ jobs:
         with:
           name: 'schematic/schematic_service_account_creds.json'
           json: ${{ secrets.SCHEMATIC_SERVICE_ACCT_CREDS }}
+          
+      - name: Download data model
+        run: |
+          curl ${{ input.data_model }} > schematic/data-model.json
+          
+      - uses: fjogeleit/yaml-update-action@main
+        with:
+          commitChange: false
+          valueFile: schematic/config.yml
+          changes: |
+           {
+             "model.input.download_url": "${{ inputs.data_model }}",
+             "model.input.location": "${{ schematic/data-model.jsonld }}"
+           }
 
       - name: Test schematic
         run: |
           cd schematic
-          poetry run schematic manifest -c config.yml get -dt Patient -oxlsx ../test.xlsx
+          poetry run schematic manifest -c config.yml get -dt ${{ input.data_types }} -t ${{ input.data_types }}-oxlsx ../test.xlsx
          
       - name: Open PR
         uses: peter-evans/create-pull-request@v5
