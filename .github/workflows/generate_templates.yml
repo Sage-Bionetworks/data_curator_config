@@ -79,5 +79,6 @@ jobs:
       - name: Open PR
         uses: peter-evans/create-pull-request@v5
         with:
-          add-paths: *.xlsx
+          add-paths: |
+            *.xlsx
       
