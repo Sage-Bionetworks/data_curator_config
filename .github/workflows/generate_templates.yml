@@ -93,12 +93,12 @@ jobs:
         id: data_types
         run: |
           sudo apt-get install jq
-          data_types=$(jq -r '[.manifest_schemas[].schema_name] | join(" ")' config.json)
+          'echo $(jq -r '[.manifest_schemas[].schema_name] | join(" ")' config.json) ${{ env.data_types }}'
 
       - name: Generate templates
         run: |
           cd schematic
-          for i in $DATA_TYPES;
+          for i in {{ env.data_types }};
           do
             poetry run schematic manifest -c config.yml get -dt "$i" -oxlsx "../${{ inputs.template_directory }}/$i.xlsx"
           done
