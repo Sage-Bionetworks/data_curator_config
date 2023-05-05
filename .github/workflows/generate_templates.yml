@@ -90,10 +90,10 @@ jobs:
            
       - name: Get template types to generate
         if: "${{ inputs.template_directory != '' }}"
-        uses: sergeysova/jq-action@v2
         id: data_types
-        with:
-          cmd: 'jq [.manifest_schemas[].schema_name] | join(" ") -r config.json'
+        run: |
+          sudo apt-get install jq
+          jq -r '[.manifest_schemas[].schema_name] | join(" ")' config.json
 
       - name: Generate templates
         run: |
