@@ -80,8 +80,9 @@ jobs:
           
       - name: Set Configurations for Data Model
         run: |
-         poetry run python3 .github/config_schema.py \
-           -c schematic/config.yml \
+         cd schematic
+         poetry run python3 ../.github/config_schema.py \
+           -c config.yml \
            --service_repo 'Sage-Bionetworks/schematic' \
            --overwrite
            
@@ -89,7 +90,7 @@ jobs:
         uses: sergeysova/jq-action@v2
         id: data_types
         with:
-          cmd: 'jq [.manifest_schemas[].schema_name]'
+          cmd: 'jq [.manifest_schemas[].schema_name] | join(" ")'
 
       - name: Generate templates
         run: |
