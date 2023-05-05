@@ -11,7 +11,10 @@ on:
         description: URL to a jsonld data model file
         required: true
       data_types:
-        description: One or more data types to create a template. Separated by a space
+        description: One or more data types to create a template separated by a space
+        required: true
+      template_directory:
+        description: Directory to save the template files
         required: true
 
 jobs:
@@ -70,17 +73,21 @@ jobs:
               "model.input.location": "data-model.jsonld"
             }
 
+      - name: Make template directory
+        run: |
+          mkdir ${{ inputs.template_directory }}
+
       - name: Generate templates
         run: |
           cd schematic
           for i in ${{ inputs.data_types }};
           do
-            poetry run schematic manifest -c config.yml get -dt "$i" -oxlsx "../$i.xlsx"
+            poetry run schematic manifest -c config.yml get -dt "$i" -oxlsx "../${{ inputs.template_directory }}/$i.xlsx"
           done
          
       - name: Open PR
         uses: peter-evans/create-pull-request@v5
         with:
           add-paths: |
-            *.xlsx
+            ${{ inputs.template_directory }}/*.xlsx
       
