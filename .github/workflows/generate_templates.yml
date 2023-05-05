@@ -88,7 +88,8 @@ jobs:
       - name: Get template types to generate
         uses: sergeysova/jq-action@v2
         id: data_types
-        cmd: 'jq [.manifest_schemas[].schema_name]'
+        with:
+          cmd: 'jq [.manifest_schemas[].schema_name]'
 
       - name: Generate templates
         run: |
