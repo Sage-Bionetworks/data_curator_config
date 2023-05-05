@@ -75,7 +75,7 @@ jobs:
 
       - name: Make template directory
         run: |
-          mkdir ${{ inputs.template_directory }}
+          mkdir -p ${{ inputs.template_directory }}
 
       - name: Generate templates
         run: |
