@@ -71,7 +71,7 @@ jobs:
           changes: |
             {
               "model.input.download_url": "${{ inputs.data_model }}",
-              "model.input.location": "data-model.jsonld"
+              "model.input.location": "./data-model.jsonld"
             }
 
       - name: Make template directory
@@ -88,6 +88,7 @@ jobs:
            --overwrite
            
       - name: Get template types to generate
+        if: "${{ inputs.template_directory != '' }}"
         uses: sergeysova/jq-action@v2
         id: data_types
         with:
