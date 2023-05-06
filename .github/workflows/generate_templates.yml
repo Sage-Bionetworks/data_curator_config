@@ -11,12 +11,14 @@ on:
       data_model:
         description: URL to a jsonld data model file
         required: true
+        default: https://raw.githubusercontent.com/Sage-Bionetworks/data-models/main/example.model.jsonld
       data_types:
         description: One or more data types to create a template separated by a space
         required: false
       template_directory:
         description: Directory to save the template files
         required: true
+        default: demo/templates
 
 jobs:
   generate-template-and-pr:
@@ -93,7 +95,7 @@ jobs:
         id: data_types
         run: |
           sudo apt-get install jq
-          'echo $(jq -r '[.manifest_schemas[].schema_name] | join(" ")' config.json) ${{ env.data_types }}'
+          echo $(jq -r '[.manifest_schemas[].schema_name] | join(" ")' config.json) ${{ env.data_types }}
 
       - name: Generate templates
         run: |
