@@ -93,9 +93,10 @@ jobs:
         if: "${{ inputs.data_types == '' }}"
         id: data_types
         run: |
-          echo $(jq -r '[.manifest_schemas[].schema_name] | join(" ")' config.json) >> ${{ env.data_types }}
+          echo "data_types=$(jq -r '[.manifest_schemas[].schema_name] | join(" ")' config.json)" >> $GITHUB_ENV
 
       - name: Generate templates
+      # TODO: use either inputs.data_types or env.data_types
         run: |
           cd schematic
           for i in {{ env.data_types }};
