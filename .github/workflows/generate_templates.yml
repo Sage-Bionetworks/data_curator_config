@@ -90,6 +90,7 @@ jobs:
            --overwrite
            
       - name: Get template types to generate
+      # TODO: get this to work
         if: "${{ inputs.data_types == '' }}"
         id: data_types
         run: |
@@ -99,7 +100,7 @@ jobs:
       # TODO: use either inputs.data_types or env.data_types
         run: |
           cd schematic
-          for i in {{ env.data_types }};
+          for i in ${{ env.data_types }};
           do
             poetry run schematic manifest -c config.yml get -dt "$i" -oxlsx "../${{ inputs.template_directory }}/$i.xlsx"
           done
