@@ -13,7 +13,7 @@ on:
         required: true
       data_types:
         description: One or more data types to create a template separated by a space
-        required: true
+        required: false
       template_directory:
         description: Directory to save the template files
         required: true
@@ -71,17 +71,36 @@ jobs:
           changes: |
             {
               "model.input.download_url": "${{ inputs.data_model }}",
-              "model.input.location": "data-model.jsonld"
+              "model.input.location": "./data-model.jsonld"
             }
 
       - name: Make template directory
         run: |
           mkdir -p ${{ inputs.template_directory }}
+          
+      - name: Set Configurations for Data Model
+        run: |
+         cd schematic
+         poetry run python3 ../.github/config_schema.py \
+           -c config.yml \
+           --service_repo 'Sage-Bionetworks/schematic' \
+           -o ../ \
+           --overwrite
+           
+      - name: Use input data types or data model
+        run: |
+          echo "data_types=${{ inputs.data_types }}" >> $GITHUB_ENV
+
+      - name: Get template types to generate
+        if: "${{ inputs.data_types == '' }}"
+        id: data_types
+        run: |
+          echo "data_types=$(jq -r '[.manifest_schemas[].schema_name] | join(" ")' config.json)" >> $GITHUB_ENV
 
       - name: Generate templates
         run: |
           cd schematic
-          for i in ${{ inputs.data_types }};
+          for i in ${{ env.data_types }};
           do
             poetry run schematic manifest -c config.yml get -dt "$i" -oxlsx "../${{ inputs.template_directory }}/$i.xlsx"
           done
