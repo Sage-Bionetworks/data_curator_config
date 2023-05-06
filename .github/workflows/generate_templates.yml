@@ -89,8 +89,11 @@ jobs:
            -o ../ \
            --overwrite
            
+      - name: Use input data types or data model
+        run: |
+          echo "data_types=${{ inputs.data_types }}" >> $GITHUB_ENV
+
       - name: Get template types to generate
-      # TODO: get this to work
         if: "${{ inputs.data_types == '' }}"
         id: data_types
         run: |
