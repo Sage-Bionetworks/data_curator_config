@@ -82,9 +82,8 @@ jobs:
           
       - name: Set Configurations for Data Model
         run: |
-         cp .github/config_schema.py schematic
          cd schematic
-         poetry run python3 config_schema.py \
+         poetry run python3 ../.github/config_schema.py \
            -c config.yml \
            --service_repo 'Sage-Bionetworks/schematic' \
            -o ../ \
@@ -94,8 +93,7 @@ jobs:
         if: "${{ inputs.data_types == '' }}"
         id: data_types
         run: |
-          sudo apt-get install jq
-          echo $(jq -r '[.manifest_schemas[].schema_name] | join(" ")' config.json) ${{ env.data_types }}
+          echo $(jq -r '[.manifest_schemas[].schema_name] | join(" ")' config.json) >> ${{ env.data_types }}
 
       - name: Generate templates
         run: |
