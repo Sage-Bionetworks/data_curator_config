@@ -121,6 +121,8 @@ jobs:
       - name: Open PR
         uses: peter-evans/create-pull-request@v5
         with:
+          title: Automatic Template Updates
+          body: Template updates triggered by repository dispatch from a data model repository.
           delete-branch: true
           branch-suffix: short-commit-hash
           add-paths: |
