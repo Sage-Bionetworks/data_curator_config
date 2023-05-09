@@ -63,12 +63,15 @@ jobs:
       - name: Set variables for schematic
         shell: bash
         run: |
-          echo github.event_name
-          if $ {{ github.event_name == "repository_dispatch" }} then;
+          echo ${{ github.event_name }}
+          if ${{ github.event_name == 'repository_dispatch' }}
+          then
+            echo Using variables from repository_dispatch
             echo 'data_model=${{ github.event.client_payload.data_model }}' >> $GITHUB_ENV
             echo 'data_types=${{ github.event.client_payload.data_types }}' >> $GITHUB_ENV
             echo 'template_directory=${{ github.event.client_payload.template_dir }}' >> $GITHUB_ENV
           else
+            echo Using variables from manual input
             echo 'data_model=${{ inputs.data_model }}' >> $GITHUB_ENV
             echo 'data_types=${{ inputs.data_types }}' >> $GITHUB_ENV
             echo 'template_directory=${{ inputs.template_directory }}' >> $GITHUB_ENV
@@ -100,10 +103,6 @@ jobs:
            --service_repo 'Sage-Bionetworks/schematic' \
            -o ../ \
            --overwrite
-           
-      #- name: Use input data types or data model
-      #  run: |
-      #    echo "data_types=${{ inputs.data_types }}" >> $GITHUB_ENV
 
       - name: Get template types to generate
         if: "${{ env.data_types == '' }}"
@@ -122,6 +121,10 @@ jobs:
       - name: Open PR
         uses: peter-evans/create-pull-request@v5
         with:
+          title: Automatic Template Updates
+          body: Template updates triggered by repository dispatch from a data model repository.
+          delete-branch: true
+          branch-suffix: short-commit-hash
           add-paths: |
             ${{ env.template_directory }}/*.xlsx
       
