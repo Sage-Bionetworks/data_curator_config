@@ -60,9 +60,22 @@ jobs:
           name: 'schematic/schematic_service_account_creds.json'
           json: ${{ secrets.SCHEMATIC_SERVICE_ACCT_CREDS }}
           
+      - name: Set variables for schematic
+        shell: bash
+        run: |
+          if $ {{ github.event_name == "repository_dispatch" }} then;
+            echo 'data_model=${{ github.event.client_payload.data_model }}' >> $GITHUB_ENV
+            echo 'data_types=${{ github.event.client_payload.data_types }}' >> $GITHUB_ENV
+            echo 'template_directory=${{ github.event.client_payload.template_dir }}' >> $GITHUB_ENV
+          else
+            echo 'data_model=${{ inputs.data_model }}' >> $GITHUB_ENV
+            echo 'data_types=${{ inputs.data_types }}' >> $GITHUB_ENV
+            echo 'template_directory=${{ inputs.template_directory }}' >> $GITHUB_ENV
+          fi
+          
       - name: Download data model
         run: |
-          curl ${{ inputs.data_model }} > schematic/data-model.jsonld
+          curl ${{ env.data_model }} > schematic/data-model.jsonld
           
       - uses: fjogeleit/yaml-update-action@main
         with:
@@ -70,13 +83,13 @@ jobs:
           valueFile: schematic/config.yml
           changes: |
             {
-              "model.input.download_url": "${{ inputs.data_model }}",
+              "model.input.download_url": "${{ env.data_model }}",
               "model.input.location": "./data-model.jsonld"
             }
 
       - name: Make template directory
         run: |
-          mkdir -p ${{ inputs.template_directory }}
+          mkdir -p ${{ env.template_directory }}
           
       - name: Set Configurations for Data Model
         run: |
@@ -87,12 +100,12 @@ jobs:
            -o ../ \
            --overwrite
            
-      - name: Use input data types or data model
-        run: |
-          echo "data_types=${{ inputs.data_types }}" >> $GITHUB_ENV
+      #- name: Use input data types or data model
+      #  run: |
+      #    echo "data_types=${{ inputs.data_types }}" >> $GITHUB_ENV
 
       - name: Get template types to generate
-        if: "${{ inputs.data_types == '' }}"
+        if: "${{ env.data_types == '' }}"
         id: data_types
         run: |
           echo "data_types=$(jq -r '[.manifest_schemas[].schema_name] | join(" ")' config.json)" >> $GITHUB_ENV
@@ -102,12 +115,12 @@ jobs:
           cd schematic
           for i in ${{ env.data_types }};
           do
-            poetry run schematic manifest -c config.yml get -dt "$i" -oxlsx "../${{ inputs.template_directory }}/$i.xlsx"
+            poetry run schematic manifest -c config.yml get -dt "$i" -oxlsx "../${{ env.template_directory }}/$i.xlsx"
           done
          
       - name: Open PR
         uses: peter-evans/create-pull-request@v5
         with:
           add-paths: |
-            ${{ inputs.template_directory }}/*.xlsx
+            ${{ env.template_directory }}/*.xlsx
       
