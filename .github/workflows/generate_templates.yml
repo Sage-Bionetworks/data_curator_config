@@ -63,6 +63,7 @@ jobs:
       - name: Set variables for schematic
         shell: bash
         run: |
+          echo github.event_name
           if $ {{ github.event_name == "repository_dispatch" }} then;
             echo 'data_model=${{ github.event.client_payload.data_model }}' >> $GITHUB_ENV
             echo 'data_types=${{ github.event.client_payload.data_types }}' >> $GITHUB_ENV
