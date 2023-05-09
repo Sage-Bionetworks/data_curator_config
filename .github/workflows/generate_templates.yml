@@ -64,7 +64,7 @@ jobs:
         shell: bash
         run: |
           echo ${{ github.event_name }}
-          if ${{ github.event_name == "repository_dispatch" }}
+          if ${{ github.event_name == 'repository_dispatch' }}
           then
             echo Using variables from repository_dispatch
             echo 'data_model=${{ github.event.client_payload.data_model }}' >> $GITHUB_ENV
