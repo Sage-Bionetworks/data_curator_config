@@ -14,7 +14,7 @@ on:
       data_types:
         description: One or more data types to create a template separated by a space
         required: false
-      template_directory:
+      community_dir:
         description: Directory to save the template files
         required: true
 
@@ -69,12 +69,12 @@ jobs:
             echo Using variables from repository_dispatch
             echo 'data_model=${{ github.event.client_payload.data_model }}' >> $GITHUB_ENV
             echo 'data_types=${{ github.event.client_payload.data_types }}' >> $GITHUB_ENV
-            echo 'template_directory=${{ github.event.client_payload.template_dir }}' >> $GITHUB_ENV
+            echo 'community_dir=${{ github.event.client_payload.template_dir }}' >> $GITHUB_ENV
           else
             echo Using variables from manual input
             echo 'data_model=${{ inputs.data_model }}' >> $GITHUB_ENV
             echo 'data_types=${{ inputs.data_types }}' >> $GITHUB_ENV
-            echo 'template_directory=${{ inputs.template_directory }}' >> $GITHUB_ENV
+            echo 'community_dir=${{ inputs.community_dir }}' >> $GITHUB_ENV
           fi
           
       - name: Download data model
@@ -93,7 +93,7 @@ jobs:
 
       - name: Make template directory
         run: |
-          mkdir -p ${{ env.template_directory }}
+          mkdir -p ${{ env.community_dir }}
           
       - name: Set Configurations for Data Model
         run: |
@@ -103,20 +103,20 @@ jobs:
            --service_repo 'Sage-Bionetworks/schematic' \
            -o ../ \
            --overwrite
-         cp ../config.json "../${{ env.template_directory }}/config.json"
+         cp ../config.json "../${{ env.community_dir }}/dca-template-config.json"
 
       - name: Get template types to generate
         if: "${{ env.data_types == '' }}"
         id: data_types
         run: |
-          echo "data_types=$(jq -r '[.manifest_schemas[].schema_name] | join(" ")' config.json)" >> $GITHUB_ENV
+          echo "data_types=$(jq -r '[.manifest_schemas[].schema_name] | join(" ")' dca-template-config.json)" >> $GITHUB_ENV
 
       - name: Generate templates
         run: |
           cd schematic
           for i in ${{ env.data_types }};
           do
-            poetry run schematic manifest -c config.yml get -dt "$i" -oxlsx "../${{ env.template_directory }}/$i.xlsx"
+            poetry run schematic manifest -c config.yml get -dt "$i" -oxlsx "../${{ env.community_dir }}/templates/$i.xlsx"
           done
          
       - name: Open PR
@@ -127,6 +127,6 @@ jobs:
           delete-branch: true
           branch-suffix: short-commit-hash
           add-paths: |
-            ${{ env.template_directory }}/*.xlsx
-            ${{ env.template_directory }}/config.json      
+            ${{ env.community_dir }}/templates/*.xlsx
+            ${{ env.community_dir }}/dca-template-config.json      
 
