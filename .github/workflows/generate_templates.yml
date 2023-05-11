@@ -103,6 +103,7 @@ jobs:
            --service_repo 'Sage-Bionetworks/schematic' \
            -o ../ \
            --overwrite
+         cp www/config.json ${{ env.template_directory }}
 
       - name: Get template types to generate
         if: "${{ env.data_types == '' }}"
@@ -127,4 +128,5 @@ jobs:
           branch-suffix: short-commit-hash
           add-paths: |
             ${{ env.template_directory }}/*.xlsx
-      
+            ${{ env.template_directory }}/config.json      
+
