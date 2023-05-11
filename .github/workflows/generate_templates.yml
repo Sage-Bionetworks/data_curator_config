@@ -69,7 +69,7 @@ jobs:
             echo Using variables from repository_dispatch
             echo 'data_model=${{ github.event.client_payload.data_model }}' >> $GITHUB_ENV
             echo 'data_types=${{ github.event.client_payload.data_types }}' >> $GITHUB_ENV
-            echo 'community_dir=${{ github.event.client_payload.template_dir }}' >> $GITHUB_ENV
+            echo 'community_dir=${{ github.event.client_payload.community_dir }}' >> $GITHUB_ENV
           else
             echo Using variables from manual input
             echo 'data_model=${{ inputs.data_model }}' >> $GITHUB_ENV
