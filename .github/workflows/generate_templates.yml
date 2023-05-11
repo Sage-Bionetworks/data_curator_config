@@ -103,7 +103,7 @@ jobs:
            --service_repo 'Sage-Bionetworks/schematic' \
            -o ../ \
            --overwrite
-         cp ../config.json ${{ env.template_directory }}
+         cp ../config.json "${{ env.template_directory }}/config.json"
 
       - name: Get template types to generate
         if: "${{ env.data_types == '' }}"
