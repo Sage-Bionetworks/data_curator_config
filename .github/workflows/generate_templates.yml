@@ -93,7 +93,7 @@ jobs:
 
       - name: Make template directory
         run: |
-          mkdir -p ${{ env.community_dir }}
+          mkdir -p ${{ env.community_dir }}/templates
           
       - name: Set Configurations for Data Model
         run: |
@@ -109,7 +109,7 @@ jobs:
         if: "${{ env.data_types == '' }}"
         id: data_types
         run: |
-          echo "data_types=$(jq -r '[.manifest_schemas[].schema_name] | join(" ")' dca-template-config.json)" >> $GITHUB_ENV
+          echo "data_types=$(jq -r '[.manifest_schemas[].schema_name] | join(" ")'config.json)" >> $GITHUB_ENV
 
       - name: Generate templates
         run: |
