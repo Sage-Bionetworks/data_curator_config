@@ -73,7 +73,7 @@ jobs:
           else
             echo Using variables from manual input
             echo 'data_model=${{ inputs.data_model }}' >> $GITHUB_ENV
-            echo 'data_types="${{ inputs.data_types }}"' >> $GITHUB_ENV
+            echo 'data_types='${{ inputs.data_types }}'' >> $GITHUB_ENV
             echo 'community_dir=${{ inputs.community_dir }}' >> $GITHUB_ENV
           fi
           
