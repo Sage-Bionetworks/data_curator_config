@@ -73,7 +73,7 @@ jobs:
           else
             echo Using variables from manual input
             echo 'data_model=${{ inputs.data_model }}' >> $GITHUB_ENV
-            echo 'data_types="${{ inputs.data_types }}"' >> $GITHUB_ENV
+            echo 'data_types=${{ inputs.data_types }}' >> $GITHUB_ENV
             echo 'community_dir=${{ inputs.community_dir }}' >> $GITHUB_ENV
           fi
           
@@ -109,7 +109,7 @@ jobs:
         if: "${{ env.data_types == '' }}"
         id: data_types
         run: |
-          echo "data_types=$(jq -r '[.manifest_schemas[].schema_name] | join(" ")'config.json)" >> $GITHUB_ENV
+          echo "data_types=$(jq -r '[.manifest_schemas[].schema_name] | join(" ")' config.json)" >> $GITHUB_ENV
 
       - name: Generate templates
         run: |
