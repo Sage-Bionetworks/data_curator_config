@@ -1,0 +1,36 @@
+{
+  "manifest_schemas": [
+    {
+      "display_name": "biospecimenMetadataTemplate",
+      "schema_name": "BiospecimenMetadataTemplate",
+      "type": "record"
+    },
+    {
+      "display_name": "clinicalMetadataTemplate",
+      "schema_name": "ClinicalMetadataTemplate",
+      "type": "record"
+    },
+    {
+      "display_name": "bulkRNAseqAssayTemplate",
+      "schema_name": "BulkRNAseqAssayTemplate",
+      "type": "record"
+    },
+    {
+      "display_name": "bulkRNAseqRawFileAnnotations",
+      "schema_name": "BulkRNAseqRawFileAnnotations",
+      "type": "file"
+    },
+    {
+      "display_name": "BulkRNASeqCountsFileAnnotations",
+      "schema_name": "BulkRNASeqCountsFileAnnotations",
+      "type": "file"
+    },
+    {
+      "display_name": "scRNAseqAssayTemplate",
+      "schema_name": "ScRNAseqAssayTemplate",
+      "type": "record"
+    }
+  ],
+  "service_version": "v23.1.1",
+  "schema_version": ""
+}
