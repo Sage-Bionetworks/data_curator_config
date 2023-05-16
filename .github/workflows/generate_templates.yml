@@ -126,7 +126,7 @@ jobs:
           title: Automatic Template Updates
           body: Template updates triggered by repository dispatch from a data model repository.
           delete-branch: true
-          branch-suffix: short-commit-hash
+          branch-suffix: timestamp
           add-paths: |
             ${{ env.community_dir }}/templates/*.xlsx
             ${{ env.community_dir }}/dca-template-config.json      
