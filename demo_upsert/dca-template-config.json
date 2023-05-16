@@ -1,21 +1,11 @@
 {
   "manifest_schemas": [
     {
-      "display_name": "Biospecimen",
-      "schema_name": "Biospecimen",
+      "display_name": "MockRDB",
+      "schema_name": "MockRDB",
       "type": "record"
-    },
-    {
-      "display_name": "Patient",
-      "schema_name": "Patient",
-      "type": "record"
-    },
-    {
-      "display_name": "Bulk RNA-seq Assay",
-      "schema_name": "BulkRNA-seqAssay",
-      "type": "file"
     }
   ],
-  "service_version": "v23.1.1",
+  "service_version": "",
   "schema_version": ""
 }
