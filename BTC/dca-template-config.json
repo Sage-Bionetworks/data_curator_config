@@ -1,8 +1,8 @@
 {
   "manifest_schemas": [
     {
-      "display_name": "Bulk RNA-seq Assay",
-      "schema_name": "BulkRNA-seqAssay",
+      "display_name": "Bulk RNA-seq Level 1",
+      "schema_name": "BulkRNA-seqLevel1",
       "type": "file"
     }
   ],
