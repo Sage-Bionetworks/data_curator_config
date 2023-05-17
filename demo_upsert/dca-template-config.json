@@ -4,6 +4,11 @@
       "display_name": "MockRDB",
       "schema_name": "MockRDB",
       "type": "record"
+    },
+    {
+      "display_name": "PublicationViewDCA",
+      "schema_name": "PublicationViewDCA",
+      "type": "record"
     }
   ],
   "service_version": "",
