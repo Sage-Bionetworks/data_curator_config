@@ -117,7 +117,7 @@ jobs:
           cd schematic
           for i in ${{ env.data_types }};
           do
-            poetry run schematic manifest -c config.yml get -dt "$i" -oxlsx "../${{ env.community_dir }}/templates/$i.xlsx"
+            poetry run schematic manifest -c config.yml get -dt "$i" -oxlsx "../${{ env.community_dir }}/templates/$i.xlsx" || continue
           done
          
       - name: Open PR
