@@ -321,11 +321,6 @@
       "type": "file"
     },
     {
-      "display_name": "File",
-      "schema_name": "File",
-      "type": "record"
-    },
-    {
       "display_name": "Mass Spectrometry Level 3",
       "schema_name": "MassSpectrometryLevel3",
       "type": "file"
@@ -338,11 +333,6 @@
     {
       "display_name": "Publication Manifest",
       "schema_name": "PublicationManifest",
-      "type": "record"
-    },
-    {
-      "display_name": "Publication",
-      "schema_name": "Publication",
       "type": "record"
     }
   ],
