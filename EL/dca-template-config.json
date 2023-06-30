@@ -1,0 +1,41 @@
+{
+  "manifest_schemas": [
+    {
+      "display_name": "Biospecimen human",
+      "schema_name": "Biospecimenhuman",
+      "type": "record"
+    },
+    {
+      "display_name": "Biospecimen nonHuman",
+      "schema_name": "BiospecimennonHuman",
+      "type": "record"
+    },
+    {
+      "display_name": "Individual Human",
+      "schema_name": "IndividualHuman",
+      "type": "record"
+    },
+    {
+      "display_name": "Individual nonHuman",
+      "schema_name": "IndividualnonHuman",
+      "type": "record"
+    },
+    {
+      "display_name": "Metabolomics Human",
+      "schema_name": "MetabolomicsHuman",
+      "type": "file"
+    },
+    {
+      "display_name": "Microbiome",
+      "schema_name": "Microbiome",
+      "type": "file"
+    },
+    {
+      "display_name": "NAseq",
+      "schema_name": "NAseq",
+      "type": "file"
+    }
+  ],
+  "service_version": "v23.1.1",
+  "schema_version": ""
+}
