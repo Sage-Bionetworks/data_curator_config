@@ -11,7 +11,7 @@ def get_args():
     """Set up command-line interface and get arguments."""
     parser = argparse.ArgumentParser()
     parser.add_argument('-c', '--config_path', metavar="",
-                        required=True, help='path to schematic config ymal file')
+                        required=True, help='path to schematic config yaml file')
     parser.add_argument('-sr', '--service_repo', metavar="",
                         help='repo path to service')
     parser.add_argument('-o', '--out_dir', default='www', metavar="",
