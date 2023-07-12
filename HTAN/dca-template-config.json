@@ -1,6 +1,11 @@
 {
   "manifest_schemas": [
     {
+      "display_name": "Patient",
+      "schema_name": "Patient",
+      "type": "record"
+    },
+    {
       "display_name": "Demographics",
       "schema_name": "Demographics",
       "type": "record"
@@ -261,6 +266,11 @@
       "type": "file"
     },
     {
+      "display_name": "10x Visium Spatial Transcriptomics - RNA-seq Level 4",
+      "schema_name": "10xVisiumSpatialTranscriptomics-RNA-seqLevel4",
+      "type": "file"
+    },
+    {
       "display_name": "HI-C-seq Level 1",
       "schema_name": "HI-C-seqLevel1",
       "type": "file"
@@ -321,6 +331,11 @@
       "type": "file"
     },
     {
+      "display_name": "File",
+      "schema_name": "File",
+      "type": "record"
+    },
+    {
       "display_name": "Mass Spectrometry Level 3",
       "schema_name": "MassSpectrometryLevel3",
       "type": "file"
@@ -334,8 +349,33 @@
       "display_name": "Publication Manifest",
       "schema_name": "PublicationManifest",
       "type": "record"
+    },
+    {
+      "display_name": "Publication",
+      "schema_name": "Publication",
+      "type": "record"
+    },
+    {
+      "display_name": "Electron Microscopy Level 1",
+      "schema_name": "ElectronMicroscopyLevel1",
+      "type": "file"
+    },
+    {
+      "display_name": "Electron Microscopy Level 2",
+      "schema_name": "ElectronMicroscopyLevel2",
+      "type": "file"
+    },
+    {
+      "display_name": "Electron Microscopy Level 3",
+      "schema_name": "ElectronMicroscopyLevel3",
+      "type": "file"
+    },
+    {
+      "display_name": "Electron Microscopy Level 4",
+      "schema_name": "ElectronMicroscopyLevel4",
+      "type": "file"
     }
   ],
-  "service_version": "v23.1.1",
-  "schema_version": ""
+  "service_version": "1",
+  "schema_version": "1"
 }
