@@ -1,11 +1,6 @@
 {
   "manifest_schemas": [
     {
-      "display_name": "Patient",
-      "schema_name": "Patient",
-      "type": "record"
-    },
-    {
       "display_name": "Demographics",
       "schema_name": "Demographics",
       "type": "record"
@@ -377,5 +372,5 @@
     }
   ],
   "service_version": "1",
-  "schema_version": "1"
+  "schema_version": "v23.6.2"
 }
