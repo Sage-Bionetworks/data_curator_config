@@ -371,6 +371,6 @@
       "type": "file"
     }
   ],
-  "service_version": "1",
+  "service_version": "v23.1.1",
   "schema_version": "v23.6.2"
 }
