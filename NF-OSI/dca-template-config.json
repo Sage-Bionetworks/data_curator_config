@@ -6,6 +6,7 @@
       {"display_name": "Single-cell RNA Sequencing Assay", "schema_name": "ScRNASeqTemplate", "type": "file"},
       {"display_name": "Epigenetics Assay", "schema_name": "EpigeneticsAssayTemplate", "type": "file"},
       {"display_name": "Other Genomics Assay", "schema_name": "GenomicsAssayTemplate", "type": "file"},
+      {"display_name": "Extended Genomics Assay", "schema_name": "GenomicsAssayTemplateExtended", "type": "file"},
       {"display_name": "Imaging Assay", "schema_name": "ImagingAssayTemplate", "type": "file"},
       {"display_name": "MRI Assay", "schema_name": "MRIAssayTemplate", "type": "file"},
       {"display_name": "Pharmacokinetics Assay", "schema_name": "PharmacokineticsAssayTemplate", "type": "file"},
