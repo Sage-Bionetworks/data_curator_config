@@ -31,8 +31,8 @@
          "type":"file"
       },
       {
-         "display_name":"NAseq",
-         "schema_name":"NAseq",
+         "display_name":"RNAseq",
+         "schema_name":"RNAseq",
          "type":"file"
       },
       {
@@ -46,26 +46,26 @@
          "type":"file"
       },
       {
-         "display_name":"bsSeq",
-         "schema_name":"bsSeq",
+         "display_name":"'bsSeq (bisulfite-seq WGBS methylseq methylomics)",
+         "schema_name":"'BsSeq(bisulfite-seqWGBSmethylseqmethylomics)",
          "type":"file"
       },
       {
-         "display_name":"cRNAseq",
-         "schema_name":"cRNAseq",
+         "display_name":"scRNAseq",
+         "schema_name":"ScRNAseq",
          "type":"file"
       },
       {
-         "display_name":"genotyping assay",
-         "schema_name":"genotypingassay",
+         "display_name":"Genotyping",
+         "schema_name":"Genotyping",
          "type":"file"
       },
       {
-         "display_name":"proteomics",
-         "schema_name":"proteomics",
+         "display_name":"Proteomics",
+         "schema_name":"Proteomics",
          "type":"file"
       }
    ],
    "service_version":"v23.1.1",
-   "schema_version":"v1.1"
+   "schema_version":"v1.2"
 }
