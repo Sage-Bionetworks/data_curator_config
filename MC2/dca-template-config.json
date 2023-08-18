@@ -1,93 +1,13 @@
 {
   "manifest_schemas": [
     {
-      "display_name": "Consortium Grant",
-      "schema_name": "ConsortiumGrant",
-      "type": "record"
-    },
-    {
-      "display_name": "Consortium",
-      "schema_name": "Consortium",
-      "type": "record"
-    },
-    {
-      "display_name": "Grant",
-      "schema_name": "Grant",
-      "type": "record"
-    },
-    {
-      "display_name": "Dataset Grant",
-      "schema_name": "DatasetGrant",
-      "type": "record"
-    },
-    {
-      "display_name": "Dataset",
-      "schema_name": "Dataset",
-      "type": "record"
-    },
-    {
       "display_name": "Dataset View",
       "schema_name": "DatasetView",
       "type": "record"
     },
     {
-      "display_name": "Publication",
-      "schema_name": "Publication",
-      "type": "record"
-    },
-    {
-      "display_name": "Grant View",
-      "schema_name": "GrantView",
-      "type": "record"
-    },
-    {
-      "display_name": "Theme",
-      "schema_name": "Theme",
-      "type": "record"
-    },
-    {
-      "display_name": "Institution",
-      "schema_name": "Institution",
-      "type": "record"
-    },
-    {
-      "display_name": "Institution Grant",
-      "schema_name": "InstitutionGrant",
-      "type": "record"
-    },
-    {
-      "display_name": "Person Consortium",
-      "schema_name": "PersonConsortium",
-      "type": "record"
-    },
-    {
-      "display_name": "Person",
-      "schema_name": "Person",
-      "type": "record"
-    },
-    {
-      "display_name": "Person View",
-      "schema_name": "PersonView",
-      "type": "record"
-    },
-    {
-      "display_name": "Tool",
-      "schema_name": "Tool",
-      "type": "record"
-    },
-    {
-      "display_name": "Project",
-      "schema_name": "Project",
-      "type": "record"
-    },
-    {
-      "display_name": "Project View",
-      "schema_name": "ProjectView",
-      "type": "record"
-    },
-    {
-      "display_name": "Publication Grant",
-      "schema_name": "PublicationGrant",
+      "display_name": "Educational Resource",
+      "schema_name": "EducationalResource",
       "type": "record"
     },
     {
@@ -96,26 +16,11 @@
       "type": "record"
     },
     {
-      "display_name": "Publication View DCA",
-      "schema_name": "PublicationViewDCA",
-      "type": "record"
-    },
-    {
-      "display_name": "Theme Grant",
-      "schema_name": "ThemeGrant",
-      "type": "record"
-    },
-    {
-      "display_name": "Tool Grant",
-      "schema_name": "ToolGrant",
-      "type": "record"
-    },
-    {
       "display_name": "Tool View",
       "schema_name": "ToolView",
       "type": "record"
     }
   ],
-  "service_version": "v23.1.1",
+  "service_version": "v23.8.1",
   "schema_version": ""
 }
