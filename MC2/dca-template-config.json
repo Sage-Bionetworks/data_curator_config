@@ -36,6 +36,16 @@
       "type": "record"
     },
     {
+      "display_name": "Educational Resource",
+      "schema_name": "EducationalResource",
+      "type": "record"
+    },
+    {
+      "display_name": "Tool",
+      "schema_name": "Tool",
+      "type": "record"
+    },
+    {
       "display_name": "Grant View",
       "schema_name": "GrantView",
       "type": "record"
@@ -68,11 +78,6 @@
     {
       "display_name": "Person View",
       "schema_name": "PersonView",
-      "type": "record"
-    },
-    {
-      "display_name": "Tool",
-      "schema_name": "Tool",
       "type": "record"
     },
     {
@@ -116,6 +121,6 @@
       "type": "record"
     }
   ],
-  "service_version": "v23.1.1",
+  "service_version": "v23.8.1",
   "schema_version": ""
 }
