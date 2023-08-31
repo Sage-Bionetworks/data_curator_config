@@ -161,16 +161,6 @@
       "type": "file"
     },
     {
-      "display_name": "NanoString GeoMx DSP Spatial Transcriptomics Level 1",
-      "schema_name": "NanoStringGeoMxDSPSpatialTranscriptomicsLevel1",
-      "type": "file"
-    },
-    {
-      "display_name": "NanoString GeoMx DSP Spatial Transcriptomics Level 3",
-      "schema_name": "NanoStringGeoMxDSPSpatialTranscriptomicsLevel3",
-      "type": "file"
-    },
-    {
       "display_name": "Other Assay",
       "schema_name": "OtherAssay",
       "type": "file"
@@ -372,5 +362,5 @@
     }
   ],
   "service_version": "1",
-  "schema_version": "92e8954"
+  "schema_version": "v23.8.1"
 }
