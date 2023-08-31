@@ -161,6 +161,16 @@
       "type": "file"
     },
     {
+      "display_name": "NanoString GeoMx DSP Spatial Transcriptomics Level 1",
+      "schema_name": "NanoStringGeoMxDSPSpatialTranscriptomicsLevel1",
+      "type": "file"
+    },
+    {
+      "display_name": "NanoString GeoMx DSP Spatial Transcriptomics Level 3",
+      "schema_name": "NanoStringGeoMxDSPSpatialTranscriptomicsLevel3",
+      "type": "file"
+    },
+    {
       "display_name": "Other Assay",
       "schema_name": "OtherAssay",
       "type": "file"
@@ -316,6 +326,16 @@
       "type": "record"
     },
     {
+      "display_name": "NanoString GeoMx DSP ROI DCC Segment Annotation Metadata",
+      "schema_name": "NanoStringGeoMxDSPROIDCCSegmentAnnotationMetadata",
+      "type": "record"
+    },
+    {
+      "display_name": "NanoString GeoMx DSP ROI RCC Segment Annotation Metadata",
+      "schema_name": "NanoStringGeoMxDSPROIRCCSegmentAnnotationMetadata",
+      "type": "record"
+    },
+    {
       "display_name": "Neuroblastoma and Glioma Tier 3",
       "schema_name": "NeuroblastomaandGliomaTier3",
       "type": "record"
@@ -362,5 +382,5 @@
     }
   ],
   "service_version": "1",
-  "schema_version": "v23.8.1"
+  "schema_version": "v23.8.3"
 }
