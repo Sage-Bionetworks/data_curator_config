@@ -127,7 +127,7 @@
       },
       {
         "display_name": "file_annotation_template",
-        "schema_name": "ManifestMetadataTemplate",
+        "schema_name": "FileAnnotationTemplate",
         "type": "file"
       }
     ],
