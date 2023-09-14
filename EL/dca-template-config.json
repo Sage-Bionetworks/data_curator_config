@@ -3,22 +3,22 @@
     {
       "display_name": "Biospecimen human",
       "schema_name": "Biospecimenhuman",
-      "type": "records"
+      "type": "record"
     },
     {
       "display_name": "Biospecimen nonHuman",
       "schema_name": "BiospecimennonHuman",
-      "type": "records"
+      "type": "record"
     },
     {
       "display_name": "Individual Human",
       "schema_name": "IndividualHuman",
-      "type": "records"
+      "type": "record"
     },
     {
       "display_name": "Individual nonHuman",
       "schema_name": "IndividualnonHuman",
-      "type": "records"
+      "type": "record"
     },
     {
       "display_name": "Metabolomics Human",
