@@ -16,12 +16,17 @@
       "type": "file"
     },
     {
-      "display_name": "ScRNA-seqLevel1",
+      "display_name": "ScATAC-seq Level1",
+      "schema_name": "ScATAC-seqLevel1",
+      "type": "file"
+    },
+    {
+      "display_name": "ScRNA-seq Level1",
       "schema_name": "ScRNA-seqLevel1",
       "type": "file"
     },
     {
-      "display_name": "ScRNA-seqLevel2",
+      "display_name": "ScRNA-seq Level2",
       "schema_name": "ScRNA-seqLevel2",
       "type": "file"
     },
