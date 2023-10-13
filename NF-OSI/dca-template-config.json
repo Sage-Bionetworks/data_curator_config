@@ -21,6 +21,6 @@
       {"display_name": "Light Scattering Assay", "schema_name": "LightScatteringAssayTemplate", "type": "file"},
       {"display_name": "Protocol Resource", "schema_name": "ProtocolTemplate", "type": "file"}
     ],
-  "service_version": "v23.1.1",
+  "service_version": "23.9.3",
   "schema_version": ""
 }
