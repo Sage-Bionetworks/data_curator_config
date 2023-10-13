@@ -1,11 +1,6 @@
 {
   "manifest_schemas": [
     {
-      "display_name": "Biospecimen",
-      "schema_name": "Biospecimen",
-      "type": "record"
-    },
-    {
       "display_name": "Imaging Level 2",
       "schema_name": "ImagingLevel2",
       "type": "file"
@@ -16,69 +11,34 @@
       "type": "file"
     },
     {
-      "display_name": "ScATAC-seq Level1",
+      "display_name": "ScATAC-seq Level 1",
       "schema_name": "ScATAC-seqLevel1",
       "type": "file"
     },
     {
-      "display_name": "ScRNA-seq Level1",
+      "display_name": "ScRNA-seq Level 1",
       "schema_name": "ScRNA-seqLevel1",
       "type": "file"
     },
     {
-      "display_name": "ScRNA-seq Level2",
+      "display_name": "ScRNA-seq Level 2",
       "schema_name": "ScRNA-seqLevel2",
       "type": "file"
     },
-    {
-      "display_name": "Breast Cancer Tier 3",
-      "schema_name": "BreastCancerTier3",
+        {
+      "display_name": "ScRNA-seq Level 3",
+      "schema_name": "ScRNA-seqLevel3",
+      "type": "file"
+    },
+        {
+      "display_name": "ScRNA-seq Level 4",
+      "schema_name": "ScRNA-seqLevel4",
       "type": "file"
     },
     {
-      "display_name": "Patient",
-      "schema_name": "Patient",
+      "display_name": "Patient Cohort Data",
+      "schema_name": "CohortCoreTemplate",
       "type": "record"
-    },
-    {
-      "display_name": "Cohort Core RFC",
-      "schema_name": "CohortCoreRFC",
-      "type": "record"
-    },
-    {
-      "display_name": "Cohort Core",
-      "schema_name": "CohortCore",
-      "type": "record"
-    },
-    {
-      "display_name": "Sample Core",
-      "schema_name": "SampleCore",
-      "type": "record"
-    },
-    {
-      "display_name": "Sample",
-      "schema_name": "Sample",
-      "type": "record"
-    },
-    {
-      "display_name": "Cohort Core",
-      "schema_name": "CohortCore",
-      "type": "record"
-    },
-    {
-      "display_name": "Ovarian Cancer Tier 3",
-      "schema_name": "OvarianCancerTier3",
-      "type": "record"
-    },
-    {
-      "display_name": "Clinical Data Tier 2",
-      "schema_name": "ClinicalDataTier2",
-      "type": "record"
-    },
-    {
-      "display_name": "CohortCorePortal",
-      "schema_name": "CohortCorePortal",
-      "type": "file"
     }
   ],
   "service_version": "v23.1.1",
