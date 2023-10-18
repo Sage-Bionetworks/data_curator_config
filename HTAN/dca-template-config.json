@@ -136,11 +136,6 @@
       "type": "file"
     },
     {
-      "display_name": "Mass Spectrometry Auxiliary File",
-      "schema_name": "MassSpectrometryAuxiliaryFile",
-      "type": "file"
-    },
-    {
       "display_name": "Mass Spectrometry Level 1",
       "schema_name": "MassSpectrometryLevel1",
       "type": "file"
@@ -193,6 +188,21 @@
     {
       "display_name": "SRRS Imaging Level 2",
       "schema_name": "SRRSImagingLevel2",
+      "type": "file"
+    },
+    {
+      "display_name": "Slide-seq Level 1",
+      "schema_name": "Slide-seqLevel1",
+      "type": "file"
+    },
+    {
+      "display_name": "Slide-seq Level 2",
+      "schema_name": "Slide-seqLevel2",
+      "type": "file"
+    },
+    {
+      "display_name": "Slide-seq Level 3",
+      "schema_name": "Slide-seqLevel3",
       "type": "file"
     },
     {
@@ -356,11 +366,6 @@
       "type": "record"
     },
     {
-      "display_name": "Publication Manifest",
-      "schema_name": "PublicationManifest",
-      "type": "record"
-    },
-    {
       "display_name": "SRRS Biospecimen",
       "schema_name": "SRRSBiospecimen",
       "type": "record"
@@ -382,5 +387,5 @@
     }
   ],
   "service_version": "1",
-  "schema_version": "v23.8.3"
+  "schema_version": "v23.10.1"
 }
