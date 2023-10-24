@@ -19,6 +19,11 @@
       "display_name": "Other Assay",
       "schema_name": "OtherAssay",
       "type": "record"
+    },
+    {
+      "display_name": "Mock Component",
+      "schema_name": "MockComponent",
+      "type": "record"
     }
   ],
   "service_version": "v23.1.1",
