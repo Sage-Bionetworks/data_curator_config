@@ -366,6 +366,11 @@
       "type": "record"
     },
     {
+      "display_name": "Publication Manifest",
+      "schema_name": "PublicationManifest",
+      "type": "record"
+    },
+    {
       "display_name": "SRRS Biospecimen",
       "schema_name": "SRRSBiospecimen",
       "type": "record"
