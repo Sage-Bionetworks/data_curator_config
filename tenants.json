@@ -3,7 +3,7 @@
     {
       "name":"DCA Demo",
       "synapse_asset_view":"syn33715412",
-      "config_location":"https://raw.githubusercontent.com/Sage-Bionetworks/data_curator_config/config-refactor/dcc/demo/dca_demo_dca_config.json"
+      "config_location":"dcc/demo/dca_demo_dca_config.json"
     },
     {
       "name":"Cancer Complexity Knowledge Portal - Database",
