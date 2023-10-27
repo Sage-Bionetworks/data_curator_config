@@ -2,7 +2,7 @@
   "project_name":"DCA Demo Upsert",
   "synapse_asset_view":"syn51489635",
   "data_model_url":"https://raw.githubusercontent.com/Sage-Bionetworks/schematic/develop/tests/data/example.model.jsonld",
-  "template_menu_config_file":"https://raw.githubusercontent.com/Sage-Bionetworks/data_curator_config/config-refactor/dcc/demo_upsert/dca-template-config.json",
+  "template_menu_config_file":"dcc/demo_upsert/dca-template-config.json",
   "manifest_output_format":"excel",
   "manifest_use_annotations":false,
   "validate_restrict_rules":false,

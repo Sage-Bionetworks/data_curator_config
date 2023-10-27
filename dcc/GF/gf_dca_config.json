@@ -2,7 +2,7 @@
   "project_name":"Gray Foundation",
   "synapse_asset_view":"syn28142805",
   "data_model_url":"https://raw.githubusercontent.com/gf-dcc/data-model/v1.1.0-rc/GF.jsonld",
-  "template_menu_config_file":"https://raw.githubusercontent.com/Sage-Bionetworks/data_curator_config/config-refactor/dcc/GF/dca-template-config.json",
+  "template_menu_config_file":"dcc/GF/dca-template-config.json",
   "manifest_output_format":"google_sheet",
   "manifest_use_annotations":false,
   "validate_restrict_rules":true,
