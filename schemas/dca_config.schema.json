@@ -4,6 +4,7 @@
   "title": "Configuration for individual DCCs in mtDCA",
   "description": "Configuration options for a specific DCC in mtDCA",
   "requires": [ "project_name", "synapse_asset_view", "data_model_url", "template_menu_config_file" ],
+  "additionalProperties": false,
   "properties": {
     "project_name": {
       "description": "Name of the DCC",
@@ -11,7 +12,8 @@
     },
     "synapse_asset_view": {
       "description": "Synapse ID of the DCC's main asset view",
-      "type": "string"
+      "type": "string",
+      "pattern": "^syn[0-9]+$"
     },
     "data_model_url": {
       "description": "URL to the DCC's data model",
@@ -39,7 +41,8 @@
     },
     "manifest_output_format": {
       "description": "Output type for downloaded manifests. excel or google_sheet",
-      "type": "string"
+      "type": "string",
+      "enum": [ "excel", "google_sheet" ]
     },
     "manifest_use_annotations": {
       "description": "Schematic manifest get option",
@@ -55,11 +58,13 @@
     },
     "submit_table_manipulation": {
       "description": "Schematic model submit option",
-      "type": "string"
+      "type": "string",
+      "enum": [ "replace", "upsert" ]
     },
     "submit_manifest_record_type": {
       "description": "Schematic model submit option",
-      "type": "string"
+      "type": "string",
+      "enum": [ "file_only", "table_and_file", "table_file_and_entities", "file_and_entities" ]
     },
     "submit_hide_blanks": {
       "description": "Schematic model submit option",
@@ -71,15 +76,18 @@
     },
     "primary_col": {
       "description": "center header color hex code",
-      "type": "string"
+      "type": "string",
+      "pattern": "^#[0-9]+"
     },
     "secondary_col": {
       "description": "right header color hex code",
-      "type": "string"
+      "type": "string",
+      "pattern": "^#[0-9]+"
     },
     "sidebar_col": {
       "description": "left header color hex code",
-      "type": "string"
+      "type": "string",
+      "pattern": "^#[0-9]+"
     }
   }
 }
