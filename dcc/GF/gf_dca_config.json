@@ -8,7 +8,7 @@
   "validate_restrict_rules":true,
   "submit_use_schema_labels":true,
   "submit_table_manipulation":"replace",
-  "submit_manifest_record_type":"table_only",
+  "submit_manifest_record_type":"table_and_file",
   "submit_hide_blanks":false,
   "use_compliance_dashboard":false,
   "primary_col":"#2a668d",
