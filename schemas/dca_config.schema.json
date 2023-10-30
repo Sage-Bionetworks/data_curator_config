@@ -17,11 +17,13 @@
     },
     "data_model_url": {
       "description": "URL to the DCC's data model",
-      "type": "string"
+      "type": "string",
+      "format": "uri-reference"
     },
     "data_model_info": {
       "description": "URL to release notes about the data model",
-      "type": "string"
+      "type": "string",
+      "format": "uri-reference"
     },
     "template_menu_config_file": {
       "description": "URL to the template dropdown menu config",
@@ -33,7 +35,8 @@
     },
     "logo_link": {
       "description": "Link for the DCC",
-      "type": "string"
+      "type": "string",
+      "format": "uri-reference"
     },
     "dcc_help_link": {
       "description": "URL DCC users can seek help",
