@@ -1,28 +1,30 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "tenants",
-  "title": "Multi-tenant DCA tenants",
-  "description": "The DCCs configured to use mtDCA",
   "properties": {
     "tenants": {
-      "description": "Configuration details of each DCC",
-      "type": "array",
+      "type": "object",
+      "required": [ "tenant" ],
+      "additionalProperties": false,
       "properties": {
-        "name": {
-          "description": "Name of the DCC as it appears in DCA",
-          "type": "string"
-        },
-        "synapse_asset_view": {
-          "description": "Synapse ID of the DCC's main asset view",
-          "type": "string"
-        },
-        "config_location": {
-          "description": "Filepath to the DCCs configuration folder",
-          "type": "string"
+        "tenant": {
+          "type": "object",
+          "required": [ "name", "synapse_asset_view", "config_location" ],
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "synapse_asset_view": {
+              "type": "string",
+              "pattern": "^syn[0-9]+$"
+            },
+            "config_location": {
+              "type": "string",
+              "pattern": "^(dcc|test).+\\.json$"
+            }
+          }
         }
-      },
-      "required": [ "name", "synapse_asset_view", "config_location" ]
+      }
     }
-  },
-  "required": [ "tenants" ]
+  }
 }
