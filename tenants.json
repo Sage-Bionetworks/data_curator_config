@@ -1,103 +1,103 @@
 {
-  "tenants": [
-    {
+  "tenants": {
+    "tenant": {
       "name":"DCA Demo",
       "synapse_asset_view":"syn33715412",
       "config_location":"dcc/demo/dca_demo_dca_config.json"
     },
-    {
+    "tenant": {
       "name":"Cancer Complexity Knowledge Portal - Database",
       "synapse_asset_view":"syn27210848",
       "config_location":"dcc/MC2/mc2_dca_config.json"
     },
-    {
+    "tenant": {
       "name":"AD Knowledge Portal",
       "synapse_asset_view":"syn51324810",
       "config_location":"dcc/ADKP/adkp_dca_config.json"
     },
-    {
+    "tenant": {
       "name":"VEOIBD",
       "synapse_asset_view":"syn51397378",
       "config_location":"dcc/VEOIBD/veoibd_dca_config.json"
     },
-    {
+    "tenant": {
       "name":"BTC DCC",
       "synapse_asset_view":"syn51407795",
       "config_location":"dcc/BTC/btc_dca_config.json"
     },
-    {
+    "tenant": {
       "name":"HTAN All Projects",
       "synapse_asset_view":"syn20446927",
       "config_location":"dcc/HTAN/htan_dca_config.json"
     },
-    {
+    "tenant": {
       "name":"Gray Foundation",
       "synapse_asset_view":"syn28142805",
       "config_location":"dcc/GF/gf_dca_config.json"
     },
-    {
+    "tenant": {
       "name":"NF-OSI",
       "synapse_asset_view":"syn16858331",
       "config_location":"dcc/NF-OSI/nf-osi_dca_config.json"
     },
-    {
+    "tenant": {
       "name":"EL",
       "synapse_asset_view":"syn51753858",
       "config_location":"dcc/EL/el-osi_dca_config.json"
     },
-    {
+    "tenant": {
       "name":"DCA Test No Folders",
       "synapse_asset_view":"syn52579643",
       "config_location":"test/test_no_folders_dca_config.json"
     },
-    {
+    "tenant": {
       "name":"DCA Test No Project Permission",
       "synapse_asset_view":"syn52579642",
       "config_location":"test/test_no_project_permission_dca_config.json"
     },
-    {
+    "tenant": {
       "name":"FAIR Data Load Test",
       "synapse_asset_view":"syn52392410",
       "config_location":"test/test_load_test_dca_config.json"
     },
-    {
+    "tenant": {
       "name":"DCA Demo Upsert",
       "synapse_asset_view":"syn51489635",
       "config_location":"dcc/demo_upsert/demo_upsert_dca_config.json"
     },
-    {
+    "tenant": {
       "name":"DCA Test file_only",
       "synapse_asset_view":"syn52578162",
       "config_location":"test/test_mrt_file_only_dca_config.json"
     },
-    {
+    "tenant": {
       "name":"DCA Test file_and_entities",
       "synapse_asset_view":"syn52578266",
       "config_location":"test/test_mrt_file_and_entities_dca_config.json"
     },
-    {
+    "tenant": {
       "name":"DCA Test table_file_and_entities",
       "synapse_asset_view":"syn52578271",
       "config_location":"test/test_mrt_table_file_and_entities_dca_config.json"},
-    {
+    "tenant": {
       "name":"DCA Test table_and_file",
       "synapse_asset_view":"syn52578263",
       "config_location":"test/test_mrt_table_and_file_dca_config.json"
     },
-    {
+    "tenant": {
       "name":"DCA Smoke Test",
       "synapse_asset_view":"syn52701135",
       "config_location":"test/smoke_test_dca_config.json"
     },
-    {
+    "tenant": {
       "name":"DCA template type tests",
       "synapse_asset_view":"syn52786062",
       "config_location":"test/test_template_type_dca_config.json"
     },
-    {
+    "tenant": {
       "name":"DCA cross manifest validation",
       "synapse_asset_view":"syn52786230",
       "config_location":"test/test_cross_manifest_validation_type_dca_config.json"
     }
-  ]
+  }
 }
