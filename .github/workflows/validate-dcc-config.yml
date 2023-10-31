@@ -21,7 +21,7 @@ jobs:
       - id: files
         uses: masesgroup/retrieve-changed-files@v3
       - run: |
-        echo "config_jsons=$((grep config.json ${{ steps.files.outputs.added_modified }}))" >> $GITHUB_OUTPUT
+          echo "config_jsons=$((grep config.json ${{ steps.files.outputs.added_modified }}))" >> $GITHUB_OUTPUT
       - uses: actions/checkout@v3
       - name: Validate JSON
         uses: docker://orrosenblatt/validate-json-action:latest
