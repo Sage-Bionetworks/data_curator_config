@@ -1,6 +1,4 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "dca-dcc-config",
   "title": "Configuration for individual DCCs in mtDCA",
   "description": "Configuration options for a specific DCC in mtDCA",
   "requires": [ "project_name", "synapse_asset_view", "data_model_url", "template_menu_config_file" ],
