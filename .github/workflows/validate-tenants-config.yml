@@ -1,6 +1,5 @@
 # ------------------------------------------------------------------------------
-# Generate template excel sheets from a data model using schematic
-# Then open a PR to incorporate them into the repo
+# Validate the tenants.json file against the tenants.schema.json schema
 # ------------------------------------------------------------------------------
 name: validate tenants config
 on:
