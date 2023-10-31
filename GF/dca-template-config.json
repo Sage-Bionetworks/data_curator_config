@@ -55,8 +55,12 @@
     },
     {
       "display_name": "Patient Cohort Data",
+<<<<<<< HEAD
       "schema_name": "Patient Cohort Data",
 >>>>>>> cd37ee2 (Update dcc_config.csv (#112))
+=======
+      "schema_name": "CohortCoreTemplate",
+>>>>>>> 0cf2dd5 (Update dca-template-config.json (#119))
       "type": "record"
     }
   ],
