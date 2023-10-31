@@ -2,11 +2,10 @@
   "tenants": [
     {
       "name":"DCA Demo",
-      "synapse_asset_view":"syn33715412",
+      "synapse_asset_view":"33715412",
       "config_location":"dcc/demo/dca_demo_dca_config.json"
     },
     {
-      "name":"Cancer Complexity Knowledge Portal - Database",
       "synapse_asset_view":"syn27210848",
       "config_location":"dcc/MC2/mc2_dca_config.json"
     },
