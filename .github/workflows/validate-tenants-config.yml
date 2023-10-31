@@ -19,5 +19,5 @@ jobs:
       - name: Validate JSON
         uses: docker://orrosenblatt/validate-json-action:latest
         env:
-          INPUT_SCHEMA: data_curator_config/schemas/tenants.schema.json
-          INPUT_JSONS: data_curator_config/tenants.json
+          INPUT_SCHEMA: schemas/tenants.schema.json
+          INPUT_JSONS: tenants.json
