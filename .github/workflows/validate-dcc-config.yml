@@ -5,7 +5,8 @@ name: validate dcc config
 on:
   push:
     paths:
-      - '*dca_config.json'
+      - 'dcc/*dca_config.json'
+      - 'test/*dca_config.json'
       - 'schemas/dca_config.schema.json'
   pull_request:
     branches:
