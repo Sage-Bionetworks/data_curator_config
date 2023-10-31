@@ -2,7 +2,7 @@
 # Generate template excel sheets from a data model using schematic
 # Then open a PR to incorporate them into the repo
 # ------------------------------------------------------------------------------
-name: validate-tenants-config
+name: validate tenants config
 on:
   push:
     paths:
