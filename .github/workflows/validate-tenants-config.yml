@@ -1,0 +1,25 @@
+# ------------------------------------------------------------------------------
+# Generate template excel sheets from a data model using schematic
+# Then open a PR to incorporate them into the repo
+# ------------------------------------------------------------------------------
+name: validate-tenants-config
+on:
+  push:
+    paths:
+      - 'tenants.json'
+  pull_request:
+    branches:
+      - 'main'
+      - 'staging'
+      - 'dev'
+
+jobs:
+  validate-tenants-config:
+  runs-on: ubuntu-latest
+steps:        
+  - uses: actions/checkout@v3
+  - name: Validate JSON
+    uses: OrRosenblatt/validate-json-action@0.1.0
+    env:
+      INPUT_SCHEMA: schemas/tenant.schema.json
+      INPUT_JSONS: tenants.json
