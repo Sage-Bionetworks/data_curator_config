@@ -32,7 +32,7 @@
     },
     {
       "display_name": "Patient Cohort Data",
-      "schema_name": "Patient Cohort Data",
+      "schema_name": "CohortCoreTemplate",
       "type": "record"
     }
   ],
