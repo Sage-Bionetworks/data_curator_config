@@ -5,8 +5,6 @@
 name: validate tenants config
 on:
   push:
-    paths:
-      - 'tenants.json'
   pull_request:
     branches:
       - 'main'
