@@ -25,8 +25,8 @@ jobs:
       - id: filter_files
         run: |
           echo "configs=$(echo ${{ steps.files.outputs.added_modified }} | tr ',' '\n' | grep dca_config\\.json | tr '\n' ',')" >> "$GITHUB_OUTPUT"
-          echo "$configs"
-          echo "${{ steps.filter_files.outputs.configs }}"
+          echo $configs
+          echo ${{ steps.filter_files.outputs.configs }}
       - uses: actions/checkout@v4
       - name: Validate JSON
         uses: docker://orrosenblatt/validate-json-action:latest
