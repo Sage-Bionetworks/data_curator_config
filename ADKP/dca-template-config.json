@@ -107,7 +107,7 @@
       },
       {
         "display_name": "biospecimen_metadata_template",
-        "schema_name": "BiospecimenqMetadataTemplate",
+        "schema_name": "BiospecimenMetadataTemplate",
         "type": "record"
       },
       {
