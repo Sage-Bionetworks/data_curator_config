@@ -1,0 +1,82 @@
+on:
+  repository_dispatch:
+    types: generate_templates
+  workflow_dispatch:
+    inputs:
+      data_model:
+        description: URL to a jsonld data model file
+        required: true
+      path:
+        description: Directory to save the template config
+        required: true
+        
+jobs:
+  create-template-config:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: r-lib/actions/setup-pandoc@v2
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+
+      - name: Install packages
+        run: install.packages(c("dplyr", "httr", "jsonlite")
+        shell: Rscript {0}
+        
+      - name: Create config file
+        run: |
+          library(httr)
+          library(dplyr)
+          library(readr)
+          library(jsonlite)
+          graph_by_edge_type <- function(url = "https://schematic-dev.api.sagebionetworks.org/v1/schemas/get/graph_by_edge_type",
+                                         schema_url, relationship = "requiresDependency") {
+            req <- httr::GET(url = url,
+                      query = list(
+                        schema_url = schema_url,
+                        relationship = relationship
+                      ))
+              httr::content(req)
+          }
+          format_edge_type <- function(edge_types) {
+            et <- bind_rows(lapply(edge_types, function(x) data.frame(value=x[[2]], component=x[[1]])))
+            et %>% filter(value %in% c("Component", "Filename")) %>% 
+              group_by(component) %>% 
+              summarise(file_based = "Filename" %in% value)
+          }
+          get_display_names <- function(qlist) {
+            if (!"schema_url" %in% names(qlist)) stop("qlist needs element named `schema_url`")
+            if (!"node_list" %in% names(qlist)) stop("qlist needs at least one element named `node_list`")
+            httr::GET(url = "https://schematic-dev.api.sagebionetworks.org/v1/schemas/get_nodes_display_names",
+                      query = qlist
+                      )
+          }
+          create_template_config <- function(data_model) {
+            edges <- graph_by_edge_type(schema_url = data_model)
+            components <- format_edge_type(edges)
+            nl <- setNames(as.list(components$component), rep("node_list", length(components$component)))
+            dnames <- get_display_names(c(schema_url = data_model, nl)) %>% httr::content()
+            data.frame(component = unlist(nl), display_name = unlist(dnames)) %>%
+              left_join(components, by = "component") %>%
+              mutate(record_type = ifelse(file_based, "file", "record")) %>%
+              select(-file_based)
+          }
+          create_json_template_config <- function(data_model, file) {
+            df <- create_template_config(data_model)
+            write_json(df, file)
+          }
+          create_json_template_config( ${{ inputs.data_model }}, ${{ inputs.path }})
+        shell: Rscript {0}
+        
+      - name: Open PR
+        uses: peter-evans/create-pull-request@v5
+        with:
+          title: Automatic Template Config
+          body: Template updates triggered by repository dispatch from a data model repository.
+          delete-branch: true
+          branch-suffix: timestamp
+          add-paths: |
+            ${{ inputs.path }}
