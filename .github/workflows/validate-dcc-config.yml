@@ -23,11 +23,11 @@ jobs:
         with:
           format: 'json'
       - run: |
-          echo ${{ steps.files.outputs.added_modified }}
+          echo configs=$(${{ steps.files.outputs.added_modified }} | tr ' ' '\n' | grep dca_config\\.json) >> $GITHUB_OUTPUT
       - uses: actions/checkout@v4
       - name: Validate JSON
         uses: docker://orrosenblatt/validate-json-action:latest
         env:
           INPUT_SCHEMA: schemas/dca_config.schema.json
-          INPUT_JSONS: ${{ steps.files.outputs.added_modified }}
+          INPUT_JSONS: ${{ steps.files.outputs.configs }}
 
