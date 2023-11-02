@@ -13,6 +13,10 @@ on:
       - 'main'
       - 'staging'
       - 'dev'
+    paths:
+      - 'dcc/*dca_config.json'
+      - 'test/*dca_config.json'
+      - 'schemas/dca_config.schema.json'
 
 jobs:
   validate-dcc-config:

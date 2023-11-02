@@ -13,6 +13,10 @@ on:
       - 'main'
       - 'staging'
       - 'dev'
+    paths:
+      - 'dcc/*dca-template-config.json'
+      - 'test/*dca-template-config.json'
+      - 'schemas/dca_template_config.schema.json'
 
 jobs:
   validate-template-config:

@@ -12,6 +12,9 @@ on:
       - 'main'
       - 'staging'
       - 'dev'
+    paths:
+      - 'tenants.json'
+      - 'schemas/tenants.schema.json'
 
 jobs:
   validate-tenants-config:
