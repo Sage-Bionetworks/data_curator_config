@@ -32,6 +32,7 @@ jobs:
           echo "configs=$(echo ${{ steps.files.outputs.added_modified }} | tr ',' '\n' | grep dca_config\\.json | tr '\n' ',' | sed 's/\(.*\),/\1 /')" >> "$GITHUB_OUTPUT"
       - uses: actions/checkout@v4
       - name: Validate JSON
+        if: ${{ steps.filter_files.outputs.configs != '' }}
         uses: docker://orrosenblatt/validate-json-action:latest
         env:
           INPUT_SCHEMA: schemas/dca_config.schema.json
