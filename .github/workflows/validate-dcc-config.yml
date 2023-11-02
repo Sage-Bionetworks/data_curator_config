@@ -1,0 +1,39 @@
+# ------------------------------------------------------------------------------
+# Validate a dcc config file against the dca_config schema
+# ------------------------------------------------------------------------------
+name: validate dcc config
+on:
+  push:
+    paths:
+      - 'dcc/*dca_config.json'
+      - 'test/*dca_config.json'
+      - 'schemas/dca_config.schema.json'
+  pull_request:
+    branches:
+      - 'main'
+      - 'staging'
+      - 'dev'
+    paths:
+      - 'dcc/*dca_config.json'
+      - 'test/*dca_config.json'
+      - 'schemas/dca_config.schema.json'
+
+jobs:
+  validate-dcc-config:
+    runs-on: ubuntu-latest
+    steps:
+      - id: files
+        uses: masesgroup/retrieve-changed-files@v3
+        with:
+          format: 'csv'
+      - id: filter_files
+        name: Filter files to dca_config.json files
+        run: |
+          echo "configs=$(echo ${{ steps.files.outputs.added_modified }} | tr ',' '\n' | grep dca_config\\.json | tr '\n' ',' | sed 's/\(.*\),/\1 /')" >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@v4
+      - name: Validate JSON
+        uses: docker://orrosenblatt/validate-json-action:latest
+        env:
+          INPUT_SCHEMA: schemas/dca_config.schema.json
+          INPUT_JSONS: ${{ steps.filter_files.outputs.configs }}
+

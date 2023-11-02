@@ -1,0 +1,28 @@
+# ------------------------------------------------------------------------------
+# Validate the tenants.json file against the tenants.schema.json schema
+# ------------------------------------------------------------------------------
+name: validate tenants config
+on:
+  push:
+    paths:
+      - 'tenants.json'
+      - 'schemas/tenants.schema.json'
+  pull_request:
+    branches:
+      - 'main'
+      - 'staging'
+      - 'dev'
+    paths:
+      - 'tenants.json'
+      - 'schemas/tenants.schema.json'
+
+jobs:
+  validate-tenants-config:
+    runs-on: ubuntu-latest
+    steps:        
+      - uses: actions/checkout@v3
+      - name: Validate JSON
+        uses: docker://orrosenblatt/validate-json-action:latest
+        env:
+          INPUT_SCHEMA: schemas/tenants.schema.json
+          INPUT_JSONS: tenants.json

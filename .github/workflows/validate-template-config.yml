@@ -1,0 +1,39 @@
+# ------------------------------------------------------------------------------
+# Validate a dca template config file against the dca template config schema
+# ------------------------------------------------------------------------------
+name: Validate Template Config
+on:
+  push:
+    paths:
+      - 'dcc/*dca-template-config.json'
+      - 'test/*dca-template-config.json'
+      - 'schemas/dca_template_config.schema.json'
+  pull_request:
+    branches:
+      - 'main'
+      - 'staging'
+      - 'dev'
+    paths:
+      - 'dcc/*dca-template-config.json'
+      - 'test/*dca-template-config.json'
+      - 'schemas/dca_template_config.schema.json'
+
+jobs:
+  validate-template-config:
+    runs-on: ubuntu-latest
+    steps:
+      - id: files
+        uses: masesgroup/retrieve-changed-files@v3
+        with:
+          format: 'csv'
+      - id: filter_files
+        name: Filter files to dca-template-config.json files
+        run: |
+          echo "configs=$(echo ${{ steps.files.outputs.added_modified }} | tr ',' '\n' | grep dca-template-config\\.json | tr '\n' ',' | sed 's/\(.*\),/\1 /')" >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@v4
+      - name: Validate JSON
+        if: ${{ steps.filter_files.outputs.configs != '' }}
+        uses: docker://orrosenblatt/validate-json-action:latest
+        env:
+          INPUT_SCHEMA: schemas/dca_template_config.schema.json
+          INPUT_JSONS: ${{ steps.filter_files.outputs.configs }}
