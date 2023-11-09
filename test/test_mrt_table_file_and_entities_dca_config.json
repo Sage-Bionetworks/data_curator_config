@@ -1,1 +1,25 @@
-{"project_name":"DCA Test table_file_and_entities","synapse_asset_view":"syn52578271","data_model_url":"https://raw.githubusercontent.com/Sage-Bionetworks/data-models/main/example.model.jsonld","template_menu_config_file":"dcc/demo/dca-template-config.json","logo_location":"demo/Logo_Sage_Logomark.png","logo_link":"https://synapse.org","manifest_output_format":"google_sheet","manifest_use_annotations":false,"validate_restrict_rules":false,"submit_use_schema_labels":true,"submit_table_manipulation":"replace","submit_manifest_record_type":"table_file_and_entities","submit_hide_blanks":false,"use_compliance_dashboard":false,"primary_col":"#2a668d","secondary_col":"#184e71","sidebar_col":"#191919"}
+{
+  "dcc": {
+    "project_name": "DCA Test table_file_and_entities",
+    "synapse_asset_view": "syn52578271",
+    "data_model_url": "https://raw.githubusercontent.com/Sage-Bionetworks/data-models/main/example.model.jsonld",
+    "template_menu_config_file": "dcc/demo/dca-template-config.json",
+    "logo_location": "demo/Logo_Sage_Logomark.png",
+    "logo_link": "https://synapse.org"
+  },
+  "dca": {
+    "use_compliance_dashboard": false,
+    "primary_col": "#2a668d",
+    "secondary_col": "#184e71",
+    "sidebar_col": "#191919"
+  },
+  "schematic": {
+    "manifest_get.output_format": "google_sheet",
+    "manifest_get.use_annotations": false,
+    "model_validate.restrict_rules": false,
+    "model_submit.use_schema_labels": true,
+    "model_submit.table_manipulation": "replace",
+    "model_submit.manifest_record_type": "table_file_and_entities",
+    "model_submit.hide_blanks": false
+  }
+}

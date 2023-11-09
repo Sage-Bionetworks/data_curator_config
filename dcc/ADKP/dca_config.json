@@ -1,11 +1,11 @@
 {
   "dcc": {
-    "project_name": "DCA template type tests",
-    "synapse_asset_view": "syn52786062",
-    "data_model_url": "https://raw.githubusercontent.com/Sage-Bionetworks/data-models/main/example.model.jsonld",
-    "template_menu_config_file": "dcc/demo/dca-template-config.json",
-    "logo_location": "dcc/demo/Logo_Sage_Logomark.png",
-    "logo_link": "https://synapse.org"
+    "project_name": "AD Knowledge Portal",
+    "synapse_asset_view": "syn51324810",
+    "data_model_url": "https://raw.githubusercontent.com/adknowledgeportal/data-models/main/divco.data.model.v1.jsonld",
+    "template_menu_config_file": "dcc/ADKP/dca-template-config.json",
+    "logo_location": "dcc/ADKP/ADKnowledgePortal.png",
+    "logo_link": "https://adknowledgeportal.synapse.org"
   },
   "dca": {
     "use_compliance_dashboard": false,
@@ -14,7 +14,7 @@
     "sidebar_col": "#191919"
   },
   "schematic": {
-    "manifest_get.output_format": "google_sheet",
+    "manifest_get.output_format": "excel",
     "manifest_get.use_annotations": false,
     "model_validate.restrict_rules": false,
     "model_submit.use_schema_labels": true,

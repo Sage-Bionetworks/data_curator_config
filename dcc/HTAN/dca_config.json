@@ -1,16 +1,16 @@
 {
   "dcc": {
-    "project_name": "DCA template type tests",
-    "synapse_asset_view": "syn52786062",
-    "data_model_url": "https://raw.githubusercontent.com/Sage-Bionetworks/data-models/main/example.model.jsonld",
-    "template_menu_config_file": "dcc/demo/dca-template-config.json",
-    "logo_location": "dcc/demo/Logo_Sage_Logomark.png",
-    "logo_link": "https://synapse.org"
+    "project_name": "HTAN All Projects",
+    "synapse_asset_view": "syn20446927",
+    "data_model_url": "https://raw.githubusercontent.com/ncihtan/data-models/main/HTAN.model.jsonld",
+    "template_menu_config_file": "dcc/HTAN/dca-template-config.json",
+    "logo_location": "dcc/HTAN/HTAN_text_logo.png",
+    "logo_link": "https://humantumoratlas.org"
   },
   "dca": {
     "use_compliance_dashboard": false,
-    "primary_col": "#2a668d",
-    "secondary_col": "#184e71",
+    "primary_col": "#605ca8",
+    "secondary_col": "#5F008C",
     "sidebar_col": "#191919"
   },
   "schematic": {
