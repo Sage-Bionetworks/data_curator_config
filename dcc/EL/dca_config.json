@@ -3,9 +3,7 @@
     "project_name": "EL",
     "synapse_asset_view": "syn51753858",
     "data_model_url": "https://raw.githubusercontent.com/Sage-Bionetworks/ELITE-data-models/main/example.model.jsonld",
-    "template_menu_config_file": "dcc/EL/dca-template-config.json",
-    "5": {},
-    "6": {}
+    "template_menu_config_file": "dcc/EL/dca-template-config.json"
   },
   "dca": {
     "use_compliance_dashboard": false,
