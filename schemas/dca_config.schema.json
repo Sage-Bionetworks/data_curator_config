@@ -7,9 +7,9 @@
     "dcc": {
       "description": "DCC parameters",
       "type": "object",
-      "requires": [ "project_name", "synapse_asset_view", "data_model_url", "template_menu_config_file" ],
+      "requires": [ "name", "synapse_asset_view", "data_model_url", "template_menu_config_file" ],
       "properties": {
-        "project_name": {
+        "name": {
           "description": "Name of the DCC",
           "type": "string"
         },
