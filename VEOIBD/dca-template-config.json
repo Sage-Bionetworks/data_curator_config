@@ -7,7 +7,7 @@
     },
     {
       "display_name": "Medication History Metadata Template",
-      "schema_name": "medicationHistoryMetadataTemplate",
+      "schema_name": "MedicationHistoryMetadataTemplate",
       "type": "record"
     },
     {
