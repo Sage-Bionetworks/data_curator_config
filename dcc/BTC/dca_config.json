@@ -3,9 +3,7 @@
     "project_name": "BTC DCC",
     "synapse_asset_view": "syn51407795",
     "data_model_url": "https://raw.githubusercontent.com/Sage-Bionetworks/btc-data-models/main/btc.model.jsonld",
-    "template_menu_config_file": "dcc/BTC/dca-template-config.json",
-    "5": {},
-    "6": {}
+    "template_menu_config_file": "dcc/BTC/dca-template-config.json"
   },
   "dca": {
     "use_compliance_dashboard": false,

@@ -3,9 +3,7 @@
     "project_name": "NF-OSI",
     "synapse_asset_view": "syn16858331",
     "data_model_url": "https://raw.githubusercontent.com/nf-osi/nf-metadata-dictionary/v8.0.1/NF.jsonld",
-    "template_menu_config_file": "dcc/NF-OSI/dca-template-config.json",
-    "5": {},
-    "6": {}
+    "template_menu_config_file": "dcc/NF-OSI/dca-template-config.json"
   },
   "dca": {
     "use_compliance_dashboard": false,

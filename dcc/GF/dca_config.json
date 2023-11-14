@@ -3,9 +3,7 @@
     "project_name": "Gray Foundation",
     "synapse_asset_view": "syn28142805",
     "data_model_url": "https://raw.githubusercontent.com/gf-dcc/data-model/v1.1.0-rc/GF.jsonld",
-    "template_menu_config_file": "dcc/GF/dca-template-config.json",
-    "5": {},
-    "6": {}
+    "template_menu_config_file": "dcc/GF/dca-template-config.json"
   },
   "dca": {
     "use_compliance_dashboard": false,
