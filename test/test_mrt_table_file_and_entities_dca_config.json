@@ -3,9 +3,12 @@
     "project_name": "DCA Test table_file_and_entities",
     "synapse_asset_view": "syn52578271",
     "data_model_url": "https://raw.githubusercontent.com/Sage-Bionetworks/data-models/main/example.model.jsonld",
+    "data_model_info": "",
     "template_menu_config_file": "dcc/demo/dca-template-config.json",
     "logo_location": "demo/Logo_Sage_Logomark.png",
-    "logo_link": "https://synapse.org"
+    "logo_link": "https://synapse.org",
+    "dca_help_link": "",
+    "portal_help_link": ""
   },
   "dca": {
     "use_compliance_dashboard": false,
@@ -14,12 +17,18 @@
     "sidebar_col": "#191919"
   },
   "schematic": {
-    "manifest_get.output_format": "google_sheet",
-    "manifest_get.use_annotations": false,
-    "model_validate.restrict_rules": false,
-    "model_submit.use_schema_labels": true,
-    "model_submit.table_manipulation": "replace",
-    "model_submit.manifest_record_type": "table_file_and_entities",
-    "model_submit.hide_blanks": false
+    "manifest_generate": {
+      "output_format": "google_sheet",
+      "use_annotations": false
+    },
+    "model_validate": {
+      "restrict_rules": false
+    },
+    "model_submit": {
+      "use_schema_labels": true,
+      "table_manipulation": "replace",
+      "manifest_record_type": "table_file_and_entities",
+      "hide_blanks": false
+    }
   }
 }
