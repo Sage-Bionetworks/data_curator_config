@@ -1,0 +1,34 @@
+{
+  "dcc": {
+    "project_name": "DCA Demo",
+    "synapse_asset_view": "syn33715412",
+    "data_model_url": "https://raw.githubusercontent.com/Sage-Bionetworks/data-models/main/example.model.jsonld",
+    "data_model_info": "",
+    "template_menu_config_file": "demo/dca-template-config.json",
+    "logo_location": "demo/Logo_Sage_Logomark.png",
+    "logo_link": "https://synapse.org",
+    "dcc_help_link": "",
+    "portal_help_link": ""
+  },
+  "dca": {
+    "use_compliance_dashboard": false,
+    "primary_col": "#2a668d",
+    "secondary_col": "#184e71",
+    "sidebar_col": "#191919"
+  },
+  "schematic": {
+    "manifest_get": {
+      "output_format": "google_sheet",
+      "use_annotations": false
+    },
+    "model_validate": {
+      "restrict_rules": false
+    },
+    "model_submit": {
+      "use_schema_labels": true,
+      "table_manipulation": "replace",
+      "manifest_record_type": "table_and_file",
+      "hide_blanks": false
+    }
+  }
+}
