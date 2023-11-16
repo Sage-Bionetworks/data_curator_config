@@ -17,7 +17,7 @@
     "sidebar_col": "#191919"
   },
   "schematic": {
-    "manifest_get": {
+    "manifest_generate": {
       "output_format": "google_sheet",
       "use_annotations": false
     },
