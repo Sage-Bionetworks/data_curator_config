@@ -1,11 +1,11 @@
 {
   "dcc": {
-    "name": "Cancer Complexity Knowledge Portal - Database",
+    "project_name": "Cancer Complexity Knowledge Portal - Database",
     "synapse_asset_view": "syn27210848",
     "data_model_url": "https://raw.githubusercontent.com/mc2-center/data-models/main/mc2.model.jsonld",
     "data_model_info": "",
-    "template_menu_config_file": "dcc/MC2/dca-template-config.json",
-    "logo_location": "dcc/MC2/cckp_logo.png",
+    "template_menu_config_file": "MC2/dca-template-config.json",
+    "logo_location": "MC2/cckp_logo.png",
     "logo_link": "https://cancercomplexity.synapse.org",
     "dcc_help_link": "",
     "portal_help_link": ""

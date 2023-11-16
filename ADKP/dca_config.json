@@ -1,11 +1,11 @@
 {
   "dcc": {
-    "name": "AD Knowledge Portal",
+    "project_name": "AD Knowledge Portal",
     "synapse_asset_view": "syn51324810",
     "data_model_url": "https://raw.githubusercontent.com/adknowledgeportal/data-models/main/divco.data.model.v1.jsonld",
     "data_model_info": "",
-    "template_menu_config_file": "dcc/ADKP/dca-template-config.json",
-    "logo_location": "dcc/ADKP/ADKnowledgePortal.png",
+    "template_menu_config_file": "ADKP/dca-template-config.json",
+    "logo_location": "ADKP/ADKnowledgePortal.png",
     "logo_link": "https://adknowledgeportal.synapse.org",
     "dcc_help_link": "",
     "portal_help_link": ""

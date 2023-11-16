@@ -1,10 +1,10 @@
 {
   "dcc": {
-    "name": "NF-OSI",
+    "project_name": "NF-OSI",
     "synapse_asset_view": "syn16858331",
-    "data_model_url": "https://raw.githubusercontent.com/nf-osi/nf-metadata-dictionary/v8.0.1/NF.jsonld",
+    "data_model_url": "https://raw.githubusercontent.com/nf-osi/nf-metadata-dictionary/main/NF.jsonld",
     "data_model_info": "",
-    "template_menu_config_file": "dcc/NF-OSI/dca-template-config.json",
+    "template_menu_config_file": "NF-OSI/dca-template-config.json",
     "logo_location": "",
     "logo_link": "",
     "dcc_help_link": "",

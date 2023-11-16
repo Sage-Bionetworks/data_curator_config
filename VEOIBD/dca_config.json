@@ -1,11 +1,11 @@
 {
   "dcc": {
-    "name": "VEOIBD",
+    "project_name": "VEOIBD",
     "synapse_asset_view": "syn51397378",
     "data_model_url": "https://raw.githubusercontent.com/VEOIBD/data_models/main/veoibd.data.model.jsonld",
     "data_model_info": "",
-    "template_menu_config_file": "dcc/VEOIBD/dca-template-config.json",
-    "logo_location": "dcc/VEOIBD/VEOIBD Logo.png",
+    "template_menu_config_file": "VEOIBD/dca-template-config.json",
+    "logo_location": "VEOIBD/VEOIBD Logo.png",
     "logo_link": "https://veoibd.org",
     "dcc_help_link": "",
     "portal_help_link": ""

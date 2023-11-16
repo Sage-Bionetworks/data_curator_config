@@ -1,10 +1,10 @@
 {
   "dcc": {
-    "name": "EL",
+    "project_name": "EL",
     "synapse_asset_view": "syn51753858",
-    "data_model_url": "https://raw.githubusercontent.com/Sage-Bionetworks/ELITE-data-models/main/example.model.jsonld",
+    "data_model_url": "https://raw.githubusercontent.com/eliteportal/data-models/main/EL.data.model.jsonld",
     "data_model_info": "",
-    "template_menu_config_file": "dcc/EL/dca-template-config.json",
+    "template_menu_config_file": "EL/dca-template-config.json",
     "logo_location": "",
     "logo_link": "",
     "dcc_help_link": "",
