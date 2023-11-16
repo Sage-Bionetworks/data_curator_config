@@ -7,7 +7,7 @@
     "template_menu_config_file": "https://raw.githubusercontent.com/Sage-Bionetworks/data-models/main/dca-template-config.json",
     "logo_location": "dcc/demo/Logo_Sage_Logomark.png",
     "logo_link": "https://synapse.org",
-    "dca_help_link": "",
+    "dcc_help_link": "",
     "portal_help_link": ""
   },
   "dca": {
