@@ -9,7 +9,13 @@ The project-specific folder contains at minimum [dca-template-config.json](demo/
 [dcc_config.csv](dcc_config.csv) allows users to configure project information, [Schematic options](https://sage-schematic.readthedocs.io/en/develop/cli_reference.html), aesthetics. The fields are:  
     - `project_name` - name of DCC in dropdown menu  
     - `synapse_asset_view` - synapse ID of asset view.  
-    - `data_model_url` - data model URL (**RAW** github file).  
+    - `data_model_url` - data model URL (RAW github file).  
+    - `data_model_info` - URL to a description of the data model, such as release notes. Optional.  
+    - `template_menu_config_file` - path to DCA template dropdown file in repo.  
+    - `logo_location` - path to logo file in repo. Optional.  
+    - `logo_link` - link to DCC website. Optional.  
+    - `dca_help_link` - link for users to find help about DCA. Optional.  
+    - `portal_help_link` - link for users to find help about their portal. Optional.  
     - `template_menu_config_file` - path to DCA template dropdown file in repo.  
     - `logo_location` - path to logo file in repo. Optional.  
     - `logo_link` - link to DCC website. Optional.  
