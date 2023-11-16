@@ -3,9 +3,12 @@
     "project_name": "VEOIBD",
     "synapse_asset_view": "syn51397378",
     "data_model_url": "https://raw.githubusercontent.com/VEOIBD/data_models/main/veoibd.data.model.jsonld",
+    "data_model_info": "",
     "template_menu_config_file": "dcc/VEOIBD/dca-template-config.json",
     "logo_location": "dcc/VEOIBD/VEOIBD Logo.png",
-    "logo_link": "https://veoibd.org"
+    "logo_link": "https://veoibd.org",
+    "dcc_help_link": "",
+    "portal_help_link": ""
   },
   "dca": {
     "use_compliance_dashboard": false,
@@ -14,12 +17,18 @@
     "sidebar_col": "#191920"
   },
   "schematic": {
-    "manifest_get.output_format": "excel",
-    "manifest_get.use_annotations": false,
-    "model_validate.restrict_rules": true,
-    "model_submit.use_schema_labels": true,
-    "model_submit.table_manipulation": "upsert",
-    "model_submit.manifest_record_type": "file_only",
-    "model_submit.hide_blanks": false
+    "manifest_generate": {
+      "output_format": "excel",
+      "use_annotations": false
+    },
+    "model_validate": {
+      "restrict_rules": true
+    },
+    "model_submit": {
+      "use_schema_labels": true,
+      "table_manipulation": "upsert",
+      "manifest_record_type": "file_only",
+      "hide_blanks": false
+    }
   }
 }

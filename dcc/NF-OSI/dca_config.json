@@ -3,7 +3,12 @@
     "project_name": "NF-OSI",
     "synapse_asset_view": "syn16858331",
     "data_model_url": "https://raw.githubusercontent.com/nf-osi/nf-metadata-dictionary/v8.0.1/NF.jsonld",
-    "template_menu_config_file": "dcc/NF-OSI/dca-template-config.json"
+    "data_model_info": "",
+    "template_menu_config_file": "dcc/NF-OSI/dca-template-config.json",
+    "logo_location": "",
+    "logo_link": "",
+    "dcc_help_link": "",
+    "portal_help_link": ""
   },
   "dca": {
     "use_compliance_dashboard": false,
@@ -12,12 +17,18 @@
     "sidebar_col": "#191919"
   },
   "schematic": {
-    "manifest_get.output_format": "google_sheet",
-    "manifest_get.use_annotations": true,
-    "model_validate.restrict_rules": false,
-    "model_submit.use_schema_labels": true,
-    "model_submit.table_manipulation": "replace",
-    "model_submit.manifest_record_type": "table_and_file",
-    "model_submit.hide_blanks": true
+    "manifest_generate": {
+      "output_format": "google_sheet",
+      "use_annotations": true
+    },
+    "model_validate": {
+      "restrict_rules": false
+    },
+    "model_submit": {
+      "use_schema_labels": true,
+      "table_manipulation": "replace",
+      "manifest_record_type": "table_and_file",
+      "hide_blanks": true
+    }
   }
 }

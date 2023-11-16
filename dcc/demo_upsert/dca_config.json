@@ -3,7 +3,12 @@
     "project_name": "DCA Demo Upsert",
     "synapse_asset_view": "syn51489635",
     "data_model_url": "https://raw.githubusercontent.com/Sage-Bionetworks/schematic/develop/tests/data/example.model.jsonld",
-    "template_menu_config_file": "dcc/demo_upsert/dca-template-config.json"
+    "data_model_info": "",
+    "template_menu_config_file": "dcc/demo_upsert/dca-template-config.json",
+    "logo_location": "",
+    "logo_link": "",
+    "dcc_help_link": "",
+    "portal_help_link": ""
   },
   "dca": {
     "use_compliance_dashboard": false,
@@ -12,12 +17,18 @@
     "sidebar_col": "#191919"
   },
   "schematic": {
-    "manifest_get.output_format": "excel",
-    "manifest_get.use_annotations": false,
-    "model_validate.restrict_rules": false,
-    "model_submit.use_schema_labels": false,
-    "model_submit.table_manipulation": "upsert",
-    "model_submit.manifest_record_type": "table_and_file",
-    "model_submit.hide_blanks": false
+    "manifest_generate": {
+      "output_format": "excel",
+      "use_annotations": false
+    },
+    "model_validate": {
+      "restrict_rules": false
+    },
+    "model_submit": {
+      "use_schema_labels": false,
+      "table_manipulation": "upsert",
+      "manifest_record_type": "table_and_file",
+      "hide_blanks": false
+    }
   }
 }

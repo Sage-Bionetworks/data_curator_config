@@ -3,7 +3,12 @@
     "project_name": "Gray Foundation",
     "synapse_asset_view": "syn28142805",
     "data_model_url": "https://raw.githubusercontent.com/gf-dcc/data-model/v1.1.0-rc/GF.jsonld",
-    "template_menu_config_file": "dcc/GF/dca-template-config.json"
+    "data_model_info": "",
+    "template_menu_config_file": "dcc/GF/dca-template-config.json",
+    "logo_location": "",
+    "logo_link": "",
+    "dcc_help_link": "",
+    "portal_help_link": ""
   },
   "dca": {
     "use_compliance_dashboard": false,
@@ -12,12 +17,18 @@
     "sidebar_col": "#191919"
   },
   "schematic": {
-    "manifest_get.output_format": "google_sheet",
-    "manifest_get.use_annotations": false,
-    "model_validate.restrict_rules": true,
-    "model_submit.use_schema_labels": true,
-    "model_submit.table_manipulation": "replace",
-    "model_submit.manifest_record_type": "table_and_file",
-    "model_submit.hide_blanks": false
+    "manifest_generate": {
+      "output_format": "google_sheet",
+      "use_annotations": false
+    },
+    "model_validate": {
+      "restrict_rules": true
+    },
+    "model_submit": {
+      "use_schema_labels": true,
+      "table_manipulation": "replace",
+      "manifest_record_type": "table_and_file",
+      "hide_blanks": false
+    }
   }
 }
