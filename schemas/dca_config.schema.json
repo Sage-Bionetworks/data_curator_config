@@ -79,37 +79,60 @@
     "schematic": {
       "description": "Schematic configuration options",
       "type": "object",
+      "requires": [ "manifest_generate", "model_validate", "model submit" ],
       "properties": {
-        "output_format": {
-          "description": "Output type for downloaded manifests. excel or google_sheet",
-          "type": "string",
-          "enum": [ "excel", "google_sheet" ]
+        "manifest_generate": {
+          "description": "Parameters to pass to Schematic manifest generate",
+          "type": "object",
+          "requires": [ "output_format", "use_annotations" ],
+          "properties": {
+            "output_format": {
+              "description": "Output type for downloaded manifests. excel or google_sheet",
+              "type": "string",
+              "enum": [ "excel", "google_sheet" ]
+            },
+            "use_annotations": {
+              "description": "Schematic manifest get option",
+              "type": "boolean"
+            },
+          }
         },
-        "use_annotations": {
-          "description": "Schematic manifest get option",
-          "type": "boolean"
+        "model_validate": {
+          "description": "Parameteres to pass to Schematic model validate",
+          "type": "object",
+          "requires": [ "restrict_rules" ],
+          "properties": {
+            "restrict_rules": {
+              "description": "Schematic model validate option",
+              "type": "boolean"
+            }
+          }
         },
-        "restrict_rules": {
-          "description": "Schematic model validate option",
-          "type": "boolean"
-        },
-        "use_schema_labels": {
-          "description": "Schematic model submit option",
-          "type": "boolean"
-        },
-        "table_manipulation": {
-          "description": "Schematic model submit option",
-          "type": "string",
-          "enum": [ "replace", "upsert" ]
-        },
-        "manifest_record_type": {
-          "description": "Schematic model submit option",
-          "type": "string",
-          "enum": [ "file_only", "table_and_file", "table_file_and_entities", "file_and_entities" ]
-        },
-        "hide_blanks": {
-          "description": "Schematic model submit option",
-          "type": "boolean"
+        "model_submit": {
+          "description": "Parameters to pass Schematic model submit",
+          "type": "object",
+          "requires": [ "use_schema_labels", "table_manipulation",
+                        "manifest_record_type", "hide_blanks" ],
+          "properties": {
+            "use_schema_labels": {
+              "description": "Schematic model submit option",
+              "type": "boolean"
+            },
+            "table_manipulation": {
+              "description": "Schematic model submit option",
+              "type": "string",
+              "enum": [ "replace", "upsert" ]
+            },
+            "manifest_record_type": {
+              "description": "Schematic model submit option",
+              "type": "string",
+              "enum": [ "file_only", "table_and_file", "table_file_and_entities", "file_and_entities" ]
+            },
+            "hide_blanks": {
+              "description": "Schematic model submit option",
+              "type": "boolean"
+            }
+          }              
         }
       }
     }
