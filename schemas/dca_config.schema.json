@@ -1,13 +1,13 @@
 {
   "title": "Configuration for individual DCCs in mtDCA",
   "description": "Configuration options for a specific DCC in mtDCA",
-  "requires": [ "dcc", "dca", "schematic" ],
+  "required": [ "dcc", "dca", "schematic" ],
   "additionalProperties": false,
   "properties": {
     "dcc": {
       "description": "DCC parameters",
       "type": "object",
-      "requires": [ "name", "synapse_asset_view", "data_model_url", "template_menu_config_file" ],
+      "required": [ "name", "synapse_asset_view", "data_model_url", "template_menu_config_file" ],
       "properties": {
         "name": {
           "description": "Name of the DCC",
@@ -79,13 +79,13 @@
     "schematic": {
       "description": "Schematic configuration options",
       "type": "object",
-      "requires": [ "manifest_generate", "model_validate", "model_submit" ],
+      "required": [ "manifest_generate", "model_validate", "model_submit" ],
       "additionalProperties": false,
       "properties": {
         "manifest_generate": {
           "description": "Parameters to pass to Schematic manifest generate",
           "type": "object",
-          "requires": [ "output_format", "use_annotations" ],
+          "required": [ "output_format", "use_annotations" ],
           "additionalProperties": false,
           "properties": {
             "output_format": {
@@ -102,7 +102,7 @@
         "model_validate": {
           "description": "Parameteres to pass to Schematic model validate",
           "type": "object",
-          "requires": [ "restrict_rules" ],
+          "required": [ "restrict_rules" ],
           "additionalProperties": false,
           "properties": {
             "restrict_rules": {
@@ -114,7 +114,7 @@
         "model_submit": {
           "description": "Parameters to pass Schematic model submit",
           "type": "object",
-          "requires": [ "use_schema_labels", "table_manipulation",
+          "required": [ "use_schema_labels", "table_manipulation",
                         "manifest_record_type", "hide_blanks" ],
           "additionalProperties": false,              
           "properties": {
