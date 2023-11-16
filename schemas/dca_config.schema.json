@@ -96,7 +96,7 @@
             "use_annotations": {
               "description": "Schematic manifest get option",
               "type": "boolean"
-            },
+            }
           }
         },
         "model_validate": {
