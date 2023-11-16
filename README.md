@@ -17,7 +17,7 @@ Each DCC will have its own directory to store configuration files. At minimum it
 -   `template_menu_config_file` - URL to DCA template dropdown file.
 -   `logo_location` - URL to logo file. Optional.
 -   `logo_link` - link to DCC website. Optional.
--   `dca_help_link` - link for users to find help about DCA. Optional.
+-   `dcc_help_link` - link for users to find help about DCA. Optional.
 -   `portal_help_link` - link for users to find help about their portal. Optional.
 
 `dca` contains DCA-specific customizations:\
