@@ -1,6 +1,6 @@
 {
   "dcc": {
-    "project_name": "DCA Smoke Test",
+    "name": "DCA Smoke Test",
     "synapse_asset_view": "syn52701135",
     "data_model_url": "https://raw.githubusercontent.com/Sage-Bionetworks/data-models/main/example.model.jsonld",
     "data_model_info": "",

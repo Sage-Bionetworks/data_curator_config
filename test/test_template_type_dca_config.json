@@ -1,6 +1,6 @@
 {
   "dcc": {
-    "project_name": "DCA template type tests",
+    "name": "DCA template type tests",
     "synapse_asset_view": "syn52786062",
     "data_model_url": "https://raw.githubusercontent.com/Sage-Bionetworks/data-models/main/example.model.jsonld",
     "data_model_info": "",

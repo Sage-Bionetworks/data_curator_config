@@ -1,6 +1,6 @@
 {
   "dcc": {
-    "project_name": "DCA Demo Upsert",
+    "name": "DCA Demo Upsert",
     "synapse_asset_view": "syn51489635",
     "data_model_url": "https://raw.githubusercontent.com/Sage-Bionetworks/schematic/develop/tests/data/example.model.jsonld",
     "data_model_info": "",

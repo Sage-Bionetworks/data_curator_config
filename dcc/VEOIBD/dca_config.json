@@ -1,6 +1,6 @@
 {
   "dcc": {
-    "project_name": "VEOIBD",
+    "name": "VEOIBD",
     "synapse_asset_view": "syn51397378",
     "data_model_url": "https://raw.githubusercontent.com/VEOIBD/data_models/main/veoibd.data.model.jsonld",
     "data_model_info": "",
