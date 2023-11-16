@@ -1,0 +1,34 @@
+{
+  "type": "object",
+  "properties": {
+    "manifest_schemas": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/manifest" }
+    },
+    "service_version": {
+      "type": "string"
+    },
+    "schema_version": {
+      "type": "string"
+    }
+  },
+  "required": [ "manifest_schemas" ],
+  "$defs": {
+    "manifest": {
+      "type": "object",
+      "required": [ "display_name", "schema_name", "type" ],
+      "properties": {
+        "display_name": {
+          "type": "string"
+        },
+        "schema_name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [ "file", "record" ]
+        }
+      }
+    }
+  }
+}
