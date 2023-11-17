@@ -11,6 +11,7 @@ on:
     branches:
       - 'main'
       - 'staging'
+      - 'staging-update'
       - 'dev'
     paths:
       - 'tenants.json'

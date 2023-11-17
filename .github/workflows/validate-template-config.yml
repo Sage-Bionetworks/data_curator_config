@@ -5,6 +5,7 @@ name: Validate Template Config
 on:
   push:
     paths:
+      - */*dca-template-config.json'
       - 'dcc/*dca-template-config.json'
       - 'test/*dca-template-config.json'
       - 'schemas/dca_template_config.schema.json'
@@ -12,8 +13,10 @@ on:
     branches:
       - 'main'
       - 'staging'
+      - 'staging-update'
       - 'dev'
     paths:
+      - '*/*dca-template-config.json'
       - 'dcc/*dca-template-config.json'
       - 'test/*dca-template-config.json'
       - 'schemas/dca_template_config.schema.json'
