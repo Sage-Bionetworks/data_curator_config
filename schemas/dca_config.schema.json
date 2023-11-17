@@ -1,6 +1,7 @@
 {
   "title": "Configuration for individual DCCs in mtDCA",
   "description": "Configuration options for a specific DCC in mtDCA",
+  "type": "object",
   "required": [ "dcc", "dca", "schematic" ],
   "additionalProperties": false,
   "properties": {
