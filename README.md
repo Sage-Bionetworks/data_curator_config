@@ -13,19 +13,19 @@ Each DCC will have its own directory to store configuration files. At minimum it
 -   `name` - name of DCC in dropdown menu
 -   `synapse_asset_view` - synapse ID of asset view.
 -   `data_model_url` - data model URL (**RAW** github file).
--   `data_model_info` - URL to a description of the data model, such as release notes. Optional.
+-   `data_model_info` - URL to a description of the data model, such as release notes. 
 -   `template_menu_config_file` - URL to DCA template dropdown file.
--   `logo_location` - URL to logo file. Optional.
--   `logo_link` - link to DCC website. Optional.
--   `dcc_help_link` - link for users to find help about DCA. Optional.
--   `portal_help_link` - link for users to find help about their portal. Optional.
+-   `logo_location` - URL to logo file. 
+-   `logo_link` - link to DCC website. 
+-   `dcc_help_link` - link for users to find help about DCA. 
+-   `portal_help_link` - link for users to find help about their portal. 
 
 `dca` contains DCA-specific customizations:\
 
 -   `use_compliance_dashboard` - `TRUE` or `FALSE`. Only FALSE currently supported. Data compliance dashboard.
--   `primary_col` - center header color hex code. Optional.
--   `secondary_col` - right header color hex code. Optional.
--   `sidebar_col` - left header color hex code. Optional.
+-   `primary_col` - center header color hex code. 
+-   `secondary_col` - right header color hex code. 
+-   `sidebar_col` - left header color hex code. 
 
 `schematic` contains several objects for passing parameters to schematic commands:\
 
