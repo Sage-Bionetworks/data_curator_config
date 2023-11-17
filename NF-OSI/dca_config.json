@@ -1,6 +1,6 @@
 {
   "dcc": {
-    "project_name": "NF-OSI",
+    "name": "NF-OSI",
     "synapse_asset_view": "syn16858331",
     "data_model_url": "https://raw.githubusercontent.com/nf-osi/nf-metadata-dictionary/main/NF.jsonld",
     "data_model_info": "",

@@ -1,6 +1,6 @@
 {
   "dcc": {
-    "project_name": "Gray Foundation",
+    "name": "Gray Foundation",
     "synapse_asset_view": "syn28142805",
     "data_model_url": "https://raw.githubusercontent.com/gf-dcc/data-model/main/GF.jsonld",
     "data_model_info": "",

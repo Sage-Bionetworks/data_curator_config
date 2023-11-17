@@ -1,6 +1,6 @@
 {
   "dcc": {
-    "project_name": "EL",
+    "name": "EL",
     "synapse_asset_view": "syn51753858",
     "data_model_url": "https://raw.githubusercontent.com/eliteportal/data-models/main/EL.data.model.jsonld",
     "data_model_info": "",

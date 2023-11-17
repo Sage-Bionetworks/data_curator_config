@@ -1,6 +1,6 @@
 {
   "dcc": {
-    "project_name": "Cohort Builder",
+    "name": "Cohort Builder",
     "synapse_asset_view": "syn51232596",
     "data_model_url": "https://raw.githubusercontent.com/eliteportal/cohort_builder_data_dictionary/main/cohort-builder-model.jsonld",
     "data_model_info": "",
