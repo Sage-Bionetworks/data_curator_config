@@ -5,7 +5,7 @@
     "data_model_url": "https://raw.githubusercontent.com/VEOIBD/data_models/main/veoibd.data.model.jsonld",
     "data_model_info": "",
     "template_menu_config_file": "https://raw.githubusercontent.com/Sage-Bionetworks/data_curator_config/main/VEOIBD/dca-template-config.json",
-    "logo_location": "VEOIBD/VEOIBD Logo.png",
+    "logo_location": "https://raw.githubusercontent.com/Sage-Bionetworks/data_curator_config/main/VEOIBD/VEOIBD Logo.png",
     "logo_link": "https://veoibd.org",
     "dcc_help_link": "",
     "portal_help_link": ""

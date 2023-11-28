@@ -5,7 +5,7 @@
     "data_model_url": "https://raw.githubusercontent.com/Sage-Bionetworks/data-models/main/example.model.jsonld",
     "data_model_info": "",
     "template_menu_config_file": "https://raw.githubusercontent.com/Sage-Bionetworks/data_curator_config/main/demo/dca-template-config.json",
-    "logo_location": "demo/Logo_Sage_Logomark.png",
+    "logo_location": "https://raw.githubusercontent.com/Sage-Bionetworks/data_curator_config/main/demo/Logo_Sage_Logomark.png",
     "logo_link": "https://synapse.org",
     "dcc_help_link": "",
     "portal_help_link": ""
