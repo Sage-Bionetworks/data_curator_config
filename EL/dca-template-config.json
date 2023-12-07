@@ -1,27 +1,27 @@
 {
   "manifest_schemas": [
     {
-      "display_name": "BiospecimenHuman",
-      "schema_name": "BiospecimenHuman",
+      "display_name": "Biospecimen Human",
+      "schema_name": "Biospecimenhuman",
       "type": "record"
     },
     {
-      "display_name": "BiospecimenNonHuman",
-      "schema_name": "BiospecimenNonHuman",
+      "display_name": "Biospecimen Non-Human",
+      "schema_name": "BiospecimennonHuman",
       "type": "record"
     },
     {
-      "display_name": "IndividualHuman",
+      "display_name": "Individual Human",
       "schema_name": "IndividualHuman",
       "type": "record"
     },
     {
-      "display_name": "IndividualnonHuman",
+      "display_name": "Individual Non-Human",
       "schema_name": "IndividualnonHuman",
       "type": "record"
     },
     {
-      "display_name": "MetabolomicsHuman",
+      "display_name": "Metabolomics Human",
       "schema_name": "MetabolomicsHuman",
       "type": "file"
     },
@@ -36,7 +36,7 @@
       "type": "file"
     },
     {
-      "display_name": "WholeGenomeSequencing",
+      "display_name": "Whole Genome Sequencing",
       "schema_name": "WholeGenomeSequencing",
       "type": "file"
     },
