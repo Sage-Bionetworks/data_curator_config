@@ -3,12 +3,12 @@
     "name": "EL",
     "synapse_asset_view": "syn51753858",
     "data_model_url": "https://raw.githubusercontent.com/eliteportal/data-models/main/EL.data.model.jsonld",
-    "data_model_info": "",
+    "data_model_info": "https://eliteportal.github.io/data-dictionary/",
     "template_menu_config_file": "https://raw.githubusercontent.com/Sage-Bionetworks/data_curator_config/main/EL/dca-template-config.json",
     "logo_location": "",
-    "logo_link": "",
+    "logo_link": "https://eliteportal.synapse.org/",
     "dcc_help_link": "",
-    "portal_help_link": ""
+    "portal_help_link": "https://help.eliteportal.org/help/"
   },
   "dca": {
     "use_compliance_dashboard": false,
