@@ -1,12 +1,12 @@
 {
   "manifest_schemas": [
     {
-      "display_name": "Biospecimen human",
+      "display_name": "Biospecimen Human",
       "schema_name": "Biospecimenhuman",
       "type": "record"
     },
     {
-      "display_name": "Biospecimen nonHuman",
+      "display_name": "Biospecimen Non-Human",
       "schema_name": "BiospecimennonHuman",
       "type": "record"
     },
@@ -16,7 +16,7 @@
       "type": "record"
     },
     {
-      "display_name": "Individual nonHuman",
+      "display_name": "Individual Non-Human",
       "schema_name": "IndividualnonHuman",
       "type": "record"
     },
@@ -31,11 +31,36 @@
       "type": "file"
     },
     {
-      "display_name": "NAseq",
-      "schema_name": "NAseq",
+      "display_name": "RNAseq",
+      "schema_name": "RNAseq",
+      "type": "file"
+    },
+    {
+      "display_name": "Whole Genome Sequencing",
+      "schema_name": "WholeGenomeSequencing",
+      "type": "file"
+    },
+    {
+      "display_name": "bsSeq",
+      "schema_name": "bsSeq",
+      "type": "file"
+    },
+    {
+      "display_name": "Genotyping",
+      "schema_name": "genotyping",
+      "type": "file"
+    },
+    {
+      "display_name": "Proteomics",
+      "schema_name": "proteomics",
+      "type": "file"
+    },
+    {
+      "display_name": "scRNAseq",
+      "schema_name": "ScRNAseq",
       "type": "file"
     }
   ],
   "service_version": "v23.1.1",
-  "schema_version": ""
+  "schema_version": "v1.3"
 }
