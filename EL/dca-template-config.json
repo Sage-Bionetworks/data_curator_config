@@ -1,28 +1,28 @@
 {
   "manifest_schemas": [
     {
-      "display_name": "Biospecimen Human",
-      "schema_name": "Biospecimenhuman",
+      "display_name": "BiospecimenHuman",
+      "schema_name": "BiospecimenHuman",
       "type": "record"
     },
     {
-      "display_name": "Biospecimen Non-Human",
-      "schema_name": "BiospecimennonHuman",
+      "display_name": "BiospecimenNonHuman",
+      "schema_name": "BiospecimenNonHuman",
       "type": "record"
     },
     {
-      "display_name": "Individual Human",
+      "display_name": "IndividualHuman",
       "schema_name": "IndividualHuman",
       "type": "record"
     },
     {
-      "display_name": "Individual Non-Human",
+      "display_name": "IndividualnonHuman",
       "schema_name": "IndividualnonHuman",
       "type": "record"
     },
     {
-      "display_name": "Metabolomics Human",
-      "schema_name": "MetabolomicsHuman",
+      "display_name": "Metabolomics",
+      "schema_name": "Metabolomics",
       "type": "file"
     },
     {
@@ -36,7 +36,7 @@
       "type": "file"
     },
     {
-      "display_name": "Whole Genome Sequencing",
+      "display_name": "WholeGenomeSequencing",
       "schema_name": "WholeGenomeSequencing",
       "type": "file"
     },
@@ -59,8 +59,13 @@
       "display_name": "scRNAseq",
       "schema_name": "ScRNAseq",
       "type": "file"
+    },
+    {
+      "display_name": "Computational Tools",
+      "schema_name": "ComputationalTools",
+      "type": "file"
     }
   ],
   "service_version": "v23.1.1",
-  "schema_version": "v1.3"
+  "schema_version": "v1.4"
 }
