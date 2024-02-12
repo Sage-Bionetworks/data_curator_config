@@ -11,7 +11,7 @@
     "portal_help_link": ""
   },
   "dca": {
-    "use_compliance_dashboard":true,
+    "use_compliance_dashboard":false,
     "primary_col":"#2a668d",
     "secondary_col":"#184e71",
     "sidebar_col":"#191919"
