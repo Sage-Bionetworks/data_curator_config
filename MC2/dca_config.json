@@ -2,9 +2,9 @@
   "dcc": {
     "name": "Cancer Complexity Knowledge Portal - Database",
     "synapse_asset_view": "syn27210848",
-    "data_model_url": "https://raw.githubusercontent.com/mc2-center/data-models/v4.1.0/mc2.model.jsonld",
-    "data_model_info": "",
-    "template_menu_config_file": "https://raw.githubusercontent.com/mc2-center/data-models/v4.1.0/dca_config/dca-template-config.json",
+    "data_model_url": "https://raw.githubusercontent.com/mc2-center/data-models/v5.1.1/mc2.model.jsonld",
+    "data_model_info": "https://mc2-center.github.io/data-models/",
+    "template_menu_config_file": "https://raw.githubusercontent.com/mc2-center/data-models/v5.1.1/dca_config/dca-template-config.json",
     "logo_location": "https://raw.githubusercontent.com/Sage-Bionetworks/data_curator_config/prod/MC2/cckp_logo.png",
     "logo_link": "https://cancercomplexity.synapse.org",
     "dcc_help_link": "",
