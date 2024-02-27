@@ -98,6 +98,9 @@
       "name":"DCA cross manifest validation",
       "synapse_asset_view":"syn52786230",
       "config_location":"test/test_cross_manifest_validation_type_dca_config.json"
-    }
+    },
+      "name":"DCA Test Data Model Labels",
+      "synapse_asset_view":"syn33715412",
+      "config_location":"test/test_demo_data_model_labels.json"
   ]
 }
