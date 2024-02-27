@@ -1,7 +1,7 @@
 {
   "dcc": {
     "name":"Test Data Model Labels",
-    "synapse_asset_view":"syn33715412",
+    "synapse_asset_view":"syn53702711",
     "data_model_url":"https://raw.githubusercontent.com/Sage-Bionetworks/data-models/main/example.model.jsonld",
     "data_model_info": "",
     "template_menu_config_file":"https://raw.githubusercontent.com/Sage-Bionetworks/data-models/main/dca-template-config.json",
