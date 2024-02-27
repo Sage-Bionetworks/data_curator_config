@@ -101,7 +101,7 @@
     },
     {
       "name":"DCA Test Data Model Labels",
-      "synapse_asset_view":"syn33715412",
+      "synapse_asset_view":"syn53702711",
       "config_location":"test/test_demo_data_model_labels.json"
     }
   ]
