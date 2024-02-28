@@ -49,6 +49,11 @@
       "name":"DCA Demo Upsert",
       "synapse_asset_view":"syn51489635",
       "config_location":"demo_upsert/dca_config.json"
+    },
+    {
+      "name":"DCA Smoke Test",
+      "synapse_asset_view":"syn52701135",
+      "config_location":"test/smoke_test_dca_config.json"
     }
   ]
 }
