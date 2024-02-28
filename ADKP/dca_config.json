@@ -25,6 +25,7 @@
       "restrict_rules": false
     },
     "model_submit": {
+      "use_schema_labels": "TRUE",
       "annotation_keys": "display_label",
       "table_manipulation": "replace",
       "manifest_record_type": "file_only",
