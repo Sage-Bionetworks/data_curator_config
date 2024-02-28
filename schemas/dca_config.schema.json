@@ -96,6 +96,7 @@
       "description": "Schematic configuration options",
       "type": "object",
       "required": [
+        "global",
         "manifest_generate",
         "model_validate",
         "model_submit"
@@ -107,7 +108,7 @@
           "type": "object",
           "required": [ "data_model_labels" ],
           "properties": {
-            "data_model_labels" {
+            "data_model_labels": {
               "description": "Source for labels of the data model",
               "type": "string",
               "enum": [ "class_label", "display_label" ]
