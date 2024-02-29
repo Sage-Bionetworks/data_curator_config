@@ -28,7 +28,9 @@
       "use_schema_labels": true,
       "table_manipulation": "replace",
       "manifest_record_type": "table_and_file",
-      "hide_blanks": true
+      "hide_blanks": true,
+      "tabel_column_names":"display_label",
+      "annotation_keys": "display_label"
     }
   }
 }
