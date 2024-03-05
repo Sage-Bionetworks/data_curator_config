@@ -17,15 +17,19 @@
     "sidebar_col": "#191919"
   },
   "schematic": {
+    "global": {
+      "data_model_labels": "class_label"
+    },
     "manifest_generate": {
-      "output_format": "excel",
+      "output_format": "google_sheet",
       "use_annotations": false
     },
     "model_validate": {
       "restrict_rules": false
     },
     "model_submit": {
-      "use_schema_labels": false,
+      "table_column_names": "display_name",
+      "annotation_keys": "class_label",
       "table_manipulation": "upsert",
       "manifest_record_type": "table_and_file",
       "hide_blanks": false
