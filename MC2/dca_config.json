@@ -21,7 +21,7 @@
       "data_model_labels": "class_label"
     },
     "manifest_generate": {
-      "output_format": "google_sheets",
+      "output_format": "google_sheet",
       "use_annotations": false
     },
     "model_validate": {
