@@ -2,9 +2,9 @@
   "dcc": {
     "name": "NF-OSI",
     "synapse_asset_view": "syn16858331",
-    "data_model_url": "https://raw.githubusercontent.com/nf-osi/nf-metadata-dictionary/v8.2.1/NF.jsonld",
+    "data_model_url": "https://raw.githubusercontent.com/nf-osi/nf-metadata-dictionary/v9.1.0/NF.jsonld",
     "data_model_info": "",
-    "template_menu_config_file": "https://raw.githubusercontent.com/Sage-Bionetworks/data_curator_config/prod/NF-OSI/dca-template-config.json",
+    "template_menu_config_file": "https://raw.githubusercontent.com/nf-osi/nf-metadata-dictionary/v9.1.0/dca-template-config.json",
     "logo_location": "",
     "logo_link": "",
     "dcc_help_link": "",
@@ -28,7 +28,9 @@
       "use_schema_labels": true,
       "table_manipulation": "replace",
       "manifest_record_type": "table_and_file",
-      "hide_blanks": true
+      "hide_blanks": true,
+      "table_column_names":"display_label",
+      "annotation_keys": "display_label"
     }
   }
 }
