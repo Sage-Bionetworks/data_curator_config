@@ -17,15 +17,19 @@
     "sidebar_col": "#191919"
   },
   "schematic": {
+    "global": {
+      "data_model_labels": "class_Label"
+    }
     "manifest_generate": {
       "output_format": "excel",
-      "use_annotations": false
+      "use_annotations": true
     },
     "model_validate": {
       "restrict_rules": false
     },
     "model_submit": {
-      "use_schema_labels": true,
+      "table_column_names": "display_label",
+      "annotation_keys": "display_label",
       "table_manipulation": "replace",
       "manifest_record_type": "file_only",
       "hide_blanks": false
