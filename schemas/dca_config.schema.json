@@ -96,12 +96,25 @@
       "description": "Schematic configuration options",
       "type": "object",
       "required": [
+        "global",
         "manifest_generate",
         "model_validate",
         "model_submit"
       ],
       "additionalProperties": false,
       "properties": {
+        "global": {
+          "description": "Parameters common to many schematic commands",
+          "type": "object",
+          "required": [ "data_model_labels" ],
+          "properties": {
+            "data_model_labels": {
+              "description": "Source for labels of the data model",
+              "type": "string",
+              "enum": [ "class_label", "display_label" ]
+            }
+          }
+        },
         "manifest_generate": {
           "description": "Parameters to pass to Schematic manifest generate",
           "type": "object",
@@ -135,16 +148,23 @@
           "description": "Parameters to pass Schematic model submit",
           "type": "object",
           "required": [
-            "use_schema_labels",
             "table_manipulation",
             "manifest_record_type",
-            "hide_blanks"
+            "hide_blanks",
+            "annotation_keys",
+            "table_column_names"
           ],
           "additionalProperties": false,              
           "properties": {
-            "use_schema_labels": {
+            "annotation_keys": {
               "description": "Schematic model submit option",
-              "type": "boolean"
+              "type": "string",
+              "enum": [ "class_label", "display_label" ]
+            },
+            "table_column_names": {
+              "description": "Schematic model submit option",
+              "type": "string",
+              "enum": [ "class_label", "display_label", "display_name" ]
             },
             "table_manipulation": {
               "description": "Schematic model submit option",
