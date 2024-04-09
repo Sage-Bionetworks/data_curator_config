@@ -28,7 +28,8 @@
       "use_schema_labels": true,
       "table_manipulation": "replace",
       "manifest_record_type": "table_and_file",
-      "hide_blanks": false
+      "hide_blanks": false,
+      "upload_file_annotations":true
     }
   }
 }
