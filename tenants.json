@@ -103,6 +103,11 @@
       "name":"DCA Test Data Model Labels",
       "synapse_asset_view":"syn53702711",
       "config_location":"test/test_demo_data_model_labels.json"
+    },
+    {
+      "name":"NF-OSI Test",
+      "synapse_asset_view":"syn58911847",
+      "config_location":"test/test_dcc_nf_osi.json"
     }
   ]
 }
