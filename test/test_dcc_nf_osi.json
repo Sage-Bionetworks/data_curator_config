@@ -17,6 +17,9 @@
     "sidebar_col": "#191919"
   },
   "schematic": {
+    "global": {
+      "data_model_labels": "class_label"
+    },
     "manifest_generate": {
       "output_format": "google_sheet",
       "use_annotations": true
