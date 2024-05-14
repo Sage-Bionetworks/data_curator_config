@@ -105,6 +105,11 @@
       "config_location":"test/test_demo_data_model_labels.json"
     },
     {
+      "name":"DCA Test file_annotations_upload",
+      "synapse_asset_view":"syn55407979",
+      "config_location":"test/test/test_submit_file_annotations_upload.json"
+    },
+    {
       "name":"NF-OSI Test",
       "synapse_asset_view":"syn58911847",
       "config_location":"test/test_dcc_nf_osi.json"
