@@ -29,7 +29,7 @@
         "table_manipulation":"replace",
         "manifest_record_type":"file_only",
         "hide_blanks":false,
-        "upload_file_annotations":false
+        "file_annotations_upload":false
       }
     }
   }
