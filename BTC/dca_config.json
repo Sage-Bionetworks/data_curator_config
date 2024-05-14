@@ -1,0 +1,34 @@
+{
+  "dcc": {
+    "name": "BTC DCC",
+    "synapse_asset_view": "syn51407795",
+    "data_model_url": "https://raw.githubusercontent.com/Sage-Bionetworks/btc-data-models/main/btc.model.jsonld",
+    "data_model_info": "",
+    "template_menu_config_file": "https://raw.githubusercontent.com/Sage-Bionetworks/data_curator_config/prod/BTC/dca-template-config.json",
+    "logo_location": "",
+    "logo_link": "",
+    "dcc_help_link": "",
+    "portal_help_link": ""
+  },
+  "dca": {
+    "use_compliance_dashboard": false,
+    "primary_col": "#2a668d",
+    "secondary_col": "#184e72",
+    "sidebar_col": "#191920"
+  },
+  "schematic": {
+    "manifest_generate": {
+      "output_format": "excel",
+      "use_annotations": false
+    },
+    "model_validate": {
+      "restrict_rules": false
+    },
+    "model_submit": {
+      "use_schema_labels": true,
+      "table_manipulation": "replace",
+      "manifest_record_type": "table_and_file",
+      "hide_blanks": false
+    }
+  }
+}

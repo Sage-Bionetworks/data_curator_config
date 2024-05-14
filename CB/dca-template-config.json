@@ -1,0 +1,16 @@
+{
+  "manifest_schemas": [
+    {
+      "display_name": "FileMapToIndividual",
+      "schema_name": "FileMapToIndividual",
+      "type": "record"
+    },
+    {
+      "display_name": "Individual Metadata",
+      "schema_name": "IndividualMetadata",
+      "type": "record"
+    }
+  ],
+  "service_version": "v23.1.1",
+  "schema_version": ""
+}

@@ -1,0 +1,54 @@
+{
+  "tenants": [
+    {
+      "name":"DCA Demo",
+      "synapse_asset_view":"syn33715412",
+      "config_location":"demo/dca_config.json"
+    },
+    {
+      "name":"Cancer Complexity Knowledge Portal - Database",
+      "synapse_asset_view":"syn27210848",
+      "config_location":"MC2/dca_config.json"
+    },
+    {
+      "name":"AD Knowledge Portal",
+      "synapse_asset_view":"syn51324810",
+      "config_location":"ADKP/dca_config.json"
+    },
+    {
+      "name":"VEOIBD",
+      "synapse_asset_view":"syn51397378",
+      "config_location":"VEOIBD/dca_config.json"
+    },
+    {
+      "name":"BTC DCC",
+      "synapse_asset_view":"syn51407795",
+      "config_location":"BTC/dca_config.json"
+    },
+    {
+      "name":"HTAN All Projects",
+      "synapse_asset_view":"syn20446927",
+      "config_location":"HTAN/dca_config.json"
+    },
+    {
+      "name":"Gray Foundation",
+      "synapse_asset_view":"syn28142805",
+      "config_location":"GF/dca_config.json"
+    },
+    {
+      "name":"NF-OSI",
+      "synapse_asset_view":"syn16858331",
+      "config_location":"NF-OSI/dca_config.json"
+    },
+    {
+      "name":"EL",
+      "synapse_asset_view":"syn51753858",
+      "config_location":"EL/dca_config.json"
+    },
+    {
+      "name":"DCA Demo Upsert",
+      "synapse_asset_view":"syn51489635",
+      "config_location":"demo_upsert/dca_config.json"
+    }
+  ]
+}

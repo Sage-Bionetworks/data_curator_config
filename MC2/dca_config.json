@@ -1,0 +1,38 @@
+{
+  "dcc": {
+    "name": "Cancer Complexity Knowledge Portal - Database",
+    "synapse_asset_view": "syn27210848",
+    "data_model_url": "https://raw.githubusercontent.com/mc2-center/data-models/v5.1.2/mc2.model.jsonld",
+    "data_model_info": "https://mc2-center.github.io/data-models/",
+    "template_menu_config_file": "https://raw.githubusercontent.com/mc2-center/data-models/v5.1.2/dca_config/dca-template-config.json",
+    "logo_location": "https://raw.githubusercontent.com/Sage-Bionetworks/data_curator_config/prod/MC2/cckp_logo.png",
+    "logo_link": "https://cancercomplexity.synapse.org",
+    "dcc_help_link": "",
+    "portal_help_link": ""
+  },
+  "dca": {
+    "use_compliance_dashboard": false,
+    "primary_col": "#407BA0",
+    "secondary_col": "#5BB0B5",
+    "sidebar_col": "#191919"
+  },
+  "schematic": {
+    "global": {
+      "data_model_labels": "class_label"
+    },
+    "manifest_generate": {
+      "output_format": "google_sheet",
+      "use_annotations": false
+    },
+    "model_validate": {
+      "restrict_rules": false
+    },
+    "model_submit": {
+      "table_column_names": "display_name",
+      "annotation_keys": "class_label",
+      "table_manipulation": "upsert",
+      "manifest_record_type": "table_and_file",
+      "hide_blanks": false
+    }
+  }
+}

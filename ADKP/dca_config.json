@@ -1,0 +1,38 @@
+{
+  "dcc": {
+    "name": "AD Knowledge Portal",
+    "synapse_asset_view": "syn51324810",
+    "data_model_url": "https://raw.githubusercontent.com/adknowledgeportal/data-models/main/AD.model.jsonld",
+    "data_model_info": "",
+    "template_menu_config_file": "https://raw.githubusercontent.com/adknowledgeportal/data-models/main/dca-template-config.json",
+    "logo_location": "https://raw.githubusercontent.com/Sage-Bionetworks/data_curator_config/prod/ADKP/ADKnowledgePortal.png",
+    "logo_link": "https://adknowledgeportal.synapse.org",
+    "dcc_help_link": "",
+    "portal_help_link": ""
+  },
+  "dca": {
+    "use_compliance_dashboard": false,
+    "primary_col": "#2a668d",
+    "secondary_col": "#184e71",
+    "sidebar_col": "#191919"
+  },
+  "schematic": {
+    "global": {
+      "data_model_labels": "class_label"
+    },
+    "manifest_generate": {
+      "output_format": "excel",
+      "use_annotations": true
+    },
+    "model_validate": {
+      "restrict_rules": false
+    },
+    "model_submit": {
+      "table_column_names": "display_label",
+      "annotation_keys": "display_label",
+      "table_manipulation": "replace",
+      "manifest_record_type": "file_only",
+      "hide_blanks": false
+    }
+  }
+}
