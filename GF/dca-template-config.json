@@ -11,17 +11,11 @@
       "type": "file"
     },
     {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       "display_name": "ScATAC-seq Level 1",
       "schema_name": "ScATAC-seqLevel1",
       "type": "file"
     },
     {
-=======
->>>>>>> cd37ee2 (Update dcc_config.csv (#112))
->>>>>>> Sage-Bionetworks-prod
       "display_name": "ScRNA-seq Level 1",
       "schema_name": "ScRNA-seqLevel1",
       "type": "file"
@@ -31,22 +25,6 @@
       "schema_name": "ScRNA-seqLevel2",
       "type": "file"
     },
-<<<<<<< HEAD
-    {
-      "display_name": "ScRNA-seq Level 3",
-      "schema_name": "ScRNA-seqLevel3",
-      "type": "file"
-    },
-    {
-      "display_name": "ScRNA-seq Level 4",
-      "schema_name": "ScRNA-seqLevel4",
-      "type": "file"
-    },
-    {
-      "display_name": "Patient Cohort Data",
-      "schema_name": "CohortCoreTemplate",
-=======
-<<<<<<< HEAD
         {
       "display_name": "ScRNA-seq Level 3",
       "schema_name": "ScRNA-seqLevel3",
@@ -60,26 +38,6 @@
     {
       "display_name": "Patient Cohort Data",
       "schema_name": "CohortCoreTemplate",
-=======
-    {
-      "display_name": "ScRNA-seq Level 3",
-      "schema_name": "ScRNA-seqLevel3",
-      "type": "file"
-    },
-    {
-      "display_name": "ScRNA-seq Level 4",
-      "schema_name": "ScRNA-seqLevel4",
-      "type": "file"
-    },
-    {
-      "display_name": "Patient Cohort Data",
-<<<<<<< HEAD
-      "schema_name": "Patient Cohort Data",
->>>>>>> cd37ee2 (Update dcc_config.csv (#112))
-=======
-      "schema_name": "CohortCoreTemplate",
->>>>>>> 0cf2dd5 (Update dca-template-config.json (#119))
->>>>>>> Sage-Bionetworks-prod
       "type": "record"
     }
   ],
