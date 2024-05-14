@@ -54,6 +54,6 @@ Each DCC also needs a template configuration file. This controls which data type
 
 -   `display_name`: Display name of the data type
 -   `schema_name`: Name of the schema
--   `type`: record or file
+-   `type`: record or file. Use file if the data type depends on the component filename and record if it does not. 
 
 See our [example dca_template_config.json](https://github.com/Sage-Bionetworks/data-models/blob/main/dca-template-config.json)
