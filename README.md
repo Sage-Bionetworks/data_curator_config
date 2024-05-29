@@ -54,6 +54,6 @@ Each DCC also needs a template configuration file. This controls which data type
 
 -   `display_name`: Display name of the data type
 -   `schema_name`: Name of the schema
--   `type`: record or file
+-   `type`: record or file. If the manifest has Filename as a column, type should be file. When annotating records inside a spreadsheet-like file, such as specimen or patient information, type should be record.
 
 See our [example dca_template_config.json](https://github.com/Sage-Bionetworks/data-models/blob/main/dca-template-config.json)
