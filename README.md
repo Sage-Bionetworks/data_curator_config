@@ -1,5 +1,7 @@
 # Project configurations for the [Data Curator App](github.com/sage-Bionetworks/data_curator)
 
+This repo contains DCC configurations for the Sage-hosted multi-tenant Data Curator App. The prod and staging branches configure their respective version of the app. To contribute, fork the repo and create PRs into the staging or prod branch, depending on which app you want to update. The staging and prod branches are maintained separately; they have diverged and are not intended to be merged, so make sure to start changes from the desired branch.
+
 The file [tenants.json](tenants.json) controls which DCCs appear in DCA. It contains a json object `tenants` which holds one json object per DCC. Each DCC object requires:
 
 -   `name`: The name of the DCC to appear in the DCA selection menu
