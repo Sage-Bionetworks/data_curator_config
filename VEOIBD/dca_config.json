@@ -17,6 +17,9 @@
     "sidebar_col": "#191920"
   },
   "schematic": {
+    "global": {
+      "data_model_labels": "class_label"
+    },
     "manifest_generate": {
       "output_format": "excel",
       "use_annotations": false
@@ -26,7 +29,7 @@
     },
     "model_submit": {
       "use_schema_labels": true,
-      "table_manipulation": "upsert",
+      "table_manipulation": "replace",
       "manifest_record_type": "file_only",
       "hide_blanks": false
     }

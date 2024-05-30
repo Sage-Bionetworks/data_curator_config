@@ -6,6 +6,11 @@
       "type": "record"
     },
     {
+      "display_name": "Medication History Metadata Template",
+      "schema_name": "MedicationHistoryMetadataTemplate",
+      "type": "record"
+    },
+    {
       "display_name": "Biospecimen Metadata Template",
       "schema_name": "BiospecimenMetadataTemplate",
       "type": "record"
