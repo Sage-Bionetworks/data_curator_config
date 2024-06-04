@@ -135,11 +135,18 @@
         "model_validate": {
           "description": "Parameteres to pass to Schematic model validate",
           "type": "object",
-          "required": [ "restrict_rules" ],
+          "required": [
+            "restrict_rules",
+            "enable_cross_manifest_validation"
+            ],
           "additionalProperties": false,
           "properties": {
             "restrict_rules": {
               "description": "Schematic model validate option",
+              "type": "boolean"
+            },
+            "enable_cross_manifest_validation": {
+              "description": "Use cross manifest validation",
               "type": "boolean"
             }
           }
