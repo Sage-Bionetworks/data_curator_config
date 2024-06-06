@@ -22,7 +22,8 @@
       "use_annotations": false
     },
     "model_validate": {
-      "restrict_rules": false
+      "restrict_rules": false,
+      "enable_cross_manifest_validation": true
     },
     "model_submit": {
       "use_schema_labels": true,
