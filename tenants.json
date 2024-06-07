@@ -113,6 +113,11 @@
       "name":"NF-OSI Test",
       "synapse_asset_view":"syn58911847",
       "config_location":"test/test_dcc_nf_osi.json"
+    },
+    {
+      "name":"Data Type Not Found Test",
+      "synapse_asset_view":"syn33715412",
+      "config_location":"test/datatype_not_found_dca_config.json"
     }
   ]
 }
