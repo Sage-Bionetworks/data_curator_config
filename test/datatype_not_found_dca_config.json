@@ -1,7 +1,7 @@
 {
     "dcc": {
       "name":"Data Type Not Found Test",
-      "synapse_asset_view":"syn33715412",
+      "synapse_asset_view":"syn60530598",
       "data_model_url":"https://raw.githubusercontent.com/Sage-Bionetworks/data-models/main/example.model.jsonld",
       "data_model_info": "https://raw.githubusercontent.com/Sage-Bionetworks/data_curator_config/dev/test/datatype_not_found_dca_template_config.json",
       "template_menu_config_file":"",
