@@ -4,7 +4,7 @@
     "synapse_asset_view": "syn28142805",
     "data_model_url": "https://raw.githubusercontent.com/gf-dcc/data-model/v1.1.0-rc/GF.jsonld",
     "data_model_info": "",
-    "template_menu_config_file": "https://raw.githubusercontent.com/Sage-Bionetworks/data_curator_config/main/GF/dca-template-config.json",
+    "template_menu_config_file": "https://raw.githubusercontent.com/Sage-Bionetworks/data_curator_config/prod/GF/dca-template-config.json",
     "logo_location": "",
     "logo_link": "",
     "dcc_help_link": "",

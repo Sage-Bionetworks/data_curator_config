@@ -4,7 +4,7 @@
     "synapse_asset_view": "syn51407795",
     "data_model_url": "https://raw.githubusercontent.com/Sage-Bionetworks/btc-data-models/main/btc.model.jsonld",
     "data_model_info": "",
-    "template_menu_config_file": "https://raw.githubusercontent.com/Sage-Bionetworks/data_curator_config/main/BTC/dca-template-config.json",
+    "template_menu_config_file": "https://raw.githubusercontent.com/Sage-Bionetworks/data_curator_config/prod/BTC/dca-template-config.json",
     "logo_location": "",
     "logo_link": "",
     "dcc_help_link": "",

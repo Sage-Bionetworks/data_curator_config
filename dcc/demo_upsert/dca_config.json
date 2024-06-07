@@ -4,7 +4,7 @@
     "synapse_asset_view": "syn51489635",
     "data_model_url": "https://raw.githubusercontent.com/Sage-Bionetworks/schematic/develop/tests/data/example.model.jsonld",
     "data_model_info": "",
-    "template_menu_config_file": "https://raw.githubusercontent.com/Sage-Bionetworks/data_curator_config/main/demo/dca-template-config.json",
+    "template_menu_config_file": "https://raw.githubusercontent.com/Sage-Bionetworks/data_curator_config/prod/demo/dca-template-config.json",
     "logo_location": "",
     "logo_link": "",
     "dcc_help_link": "",

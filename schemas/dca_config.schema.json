@@ -1,14 +1,23 @@
 {
   "title": "Configuration for individual DCCs in mtDCA",
   "description": "Configuration options for a specific DCC in mtDCA",
-  "type": "object",
   "required": [ "dcc", "dca", "schematic" ],
   "additionalProperties": false,
   "properties": {
     "dcc": {
       "description": "DCC parameters",
       "type": "object",
-      "required": [ "name", "synapse_asset_view", "data_model_url", "template_menu_config_file" ],
+      "required": [
+        "name",
+        "synapse_asset_view",
+        "data_model_url",
+        "data_model_info",
+        "template_menu_config_file",
+        "logo_location",
+        "logo_link",
+        "dcc_help_link",
+        "portal_help_link"
+      ],
       "properties": {
         "name": {
           "description": "Name of the DCC",
@@ -55,6 +64,12 @@
     "dca": {
       "description": "DCA configuration options",
       "type": "object",
+      "required": [
+        "use_compliance_dashboard",
+        "primary_col",
+        "secondary_col",
+        "sidebar_col"
+      ],
       "properties": {
         "use_compliance_dashboard": {
           "description": "Display the compliance dashboard. Unavaible at the moment",
@@ -80,9 +95,26 @@
     "schematic": {
       "description": "Schematic configuration options",
       "type": "object",
-      "required": [ "manifest_generate", "model_validate", "model_submit" ],
+      "required": [
+        "global",
+        "manifest_generate",
+        "model_validate",
+        "model_submit"
+      ],
       "additionalProperties": false,
       "properties": {
+        "global": {
+          "description": "Parameters common to many schematic commands",
+          "type": "object",
+          "required": [ "data_model_labels" ],
+          "properties": {
+            "data_model_labels": {
+              "description": "Source for labels of the data model",
+              "type": "string",
+              "enum": [ "class_label", "display_label" ]
+            }
+          }
+        },
         "manifest_generate": {
           "description": "Parameters to pass to Schematic manifest generate",
           "type": "object",
@@ -103,11 +135,18 @@
         "model_validate": {
           "description": "Parameteres to pass to Schematic model validate",
           "type": "object",
-          "required": [ "restrict_rules" ],
+          "required": [
+            "restrict_rules",
+            "enable_cross_manifest_validation"
+            ],
           "additionalProperties": false,
           "properties": {
             "restrict_rules": {
               "description": "Schematic model validate option",
+              "type": "boolean"
+            },
+            "enable_cross_manifest_validation": {
+              "description": "Use cross manifest validation",
               "type": "boolean"
             }
           }
@@ -115,13 +154,25 @@
         "model_submit": {
           "description": "Parameters to pass Schematic model submit",
           "type": "object",
-          "required": [ "use_schema_labels", "table_manipulation",
-                        "manifest_record_type", "hide_blanks" ],
+          "required": [
+            "table_manipulation",
+            "manifest_record_type",
+            "hide_blanks",
+            "annotation_keys",
+            "table_column_names",
+            "file_annotations_upload"
+          ],
           "additionalProperties": false,              
           "properties": {
-            "use_schema_labels": {
+            "annotation_keys": {
               "description": "Schematic model submit option",
-              "type": "boolean"
+              "type": "string",
+              "enum": [ "class_label", "display_label" ]
+            },
+            "table_column_names": {
+              "description": "Schematic model submit option",
+              "type": "string",
+              "enum": [ "class_label", "display_label", "display_name" ]
             },
             "table_manipulation": {
               "description": "Schematic model submit option",
@@ -136,11 +187,14 @@
             "hide_blanks": {
               "description": "Schematic model submit option",
               "type": "boolean"
+            },
+            "file_annotations_upload": {
+              "description": "Choose to add annotations to files during upload",
+              "type": "boolean"
             }
-          }              
+          }
         }
       }
     }
   }
 }
-
