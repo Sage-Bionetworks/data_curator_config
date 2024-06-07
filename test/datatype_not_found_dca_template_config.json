@@ -2,7 +2,7 @@
   "manifest_schemas": [
     {
       "display_name": "Biospecimen",
-      "schema_name": "Biospecimen_typo",
+      "schema_name": "Biospecimen",
       "type": "record"
     },
     {
