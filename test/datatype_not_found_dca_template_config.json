@@ -7,12 +7,12 @@
     },
     {
       "display_name": "Bulk RNA-seq Assay",
-      "schema_name": "BULKRNASEQASSAY",
+      "schema_name": "BulkRNA-seqAssay",
       "type": "file"
     },
     {
       "display_name": "MockComponent",
-      "schema_name": "Mockcomponent",
+      "schema_name": "MockComponent",
       "type": "record",
       "project_scope": [
         "syn53210550",
@@ -21,12 +21,12 @@
     },
     {
       "display_name": "Other Assay",
-      "schema_name": "OtherrAssay",
+      "schema_name": "OtherAssay",
       "type": "file"
     },
     {
       "display_name": "Patient",
-      "schema_name": "Patients",
+      "schema_name": "Patient",
       "type": "record"
     }
   ],
