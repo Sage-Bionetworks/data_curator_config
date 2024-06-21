@@ -43,6 +43,7 @@ Each DCC will have its own directory to store configuration files. At minimum it
 -   `model_validate`
 
     -   `restrict_rules`: `TRUE` or `FALSE`. [Schematic model validate and submit option](https://sage-schematic.readthedocs.io/en/develop/cli_reference.html#schematic-model-validate).
+    -   `enable_cross_manifest_validation`: `TRUE` or `FALSE`. Use cross manifest validation.
 
 -   `model_submit`
 
