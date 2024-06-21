@@ -1,5 +1,10 @@
 {
   "tenants": [
+        {
+      "name":"DCA Demo - TESTING BRANCH ONLY",
+      "synapse_asset_view":"syn55226012",
+      "config_location":"demo/dca_config.json"
+    },
     {
       "name":"DCA Demo",
       "synapse_asset_view":"syn33715412",
