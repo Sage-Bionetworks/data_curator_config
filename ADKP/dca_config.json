@@ -26,7 +26,7 @@
     },
     "model_validate": {
       "restrict_rules": false,
-      "enable cross-manifest validation": true
+      "enable_cross_manifest_validation": true
     },
     "model_submit": {
       "table_column_names": "display_label",
