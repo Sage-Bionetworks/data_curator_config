@@ -25,7 +25,8 @@
       "use_annotations": true
     },
     "model_validate": {
-      "restrict_rules": false
+      "restrict_rules": false,
+      "enable cross-manifest validation": true
     },
     "model_submit": {
       "table_column_names": "display_label",
