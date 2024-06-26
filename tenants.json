@@ -11,8 +11,8 @@
       "config_location":"MC2/dca_config.json"
     },
     {
-      "name":"AD Knowledge Portal",
-      "synapse_asset_view":"syn51324810",
+      "name":"AD Knowledge Portal - test project",
+      "synapse_asset_view":"syn58711351",
       "config_location":"ADKP/dca_config.json"
     },
     {
