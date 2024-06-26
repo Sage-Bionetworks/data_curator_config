@@ -1,10 +1,10 @@
 {
   "dcc": {
     "name": "AD Knowledge Portal",
-    "synapse_asset_view": "syn51324810",
-    "data_model_url": "https://raw.githubusercontent.com/adknowledgeportal/data-models/main/AD.model.jsonld",
-    "data_model_info": "",
-    "template_menu_config_file": "https://raw.githubusercontent.com/adknowledgeportal/data-models/main/dca-template-config.json",
+    "synapse_asset_view": "syn58711351", 
+    "data_model_url": "https://raw.githubusercontent.com/adknowledgeportal/data-models/xman-testing/AD.test.model.jsonld",
+    "data_model_info": "cross-manifest validation testing branch",
+    "template_menu_config_file": "https://raw.githubusercontent.com/adknowledgeportal/data-models/xman-testing/dca-template-config.json",
     "logo_location": "https://raw.githubusercontent.com/Sage-Bionetworks/data_curator_config/prod/ADKP/ADKnowledgePortal.png",
     "logo_link": "https://adknowledgeportal.synapse.org",
     "dcc_help_link": "",
@@ -25,7 +25,8 @@
       "use_annotations": true
     },
     "model_validate": {
-      "restrict_rules": false
+      "restrict_rules": false,
+      "enable_cross_manifest_validation": true
     },
     "model_submit": {
       "table_column_names": "display_label",
