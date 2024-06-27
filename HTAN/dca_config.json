@@ -7,8 +7,8 @@
     "template_menu_config_file": "https://raw.githubusercontent.com/ncihtan/data-models/v24.6.2/dca-template-config.json",
     "logo_location": "https://raw.githubusercontent.com/Sage-Bionetworks/data_curator_config/prod/HTAN/HTAN_text_logo.png",
     "logo_link": "https://humantumoratlas.org",
-    "dcc_help_link": "",
-    "portal_help_link": ""
+    "dcc_help_link": "https://dca-docs.scrollhelp.site/DCA/Working-version/HTAN/",
+    "portal_help_link": "https://docs.humantumoratlas.org/"
   },
   "dca": {
     "use_compliance_dashboard": false,
