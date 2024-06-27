@@ -26,7 +26,7 @@
     },
     "model_submit": {
       "use_schema_labels": true,
-      "table_manipulation": "upsert",
+      "table_manipulation": "replace",
       "manifest_record_type": "file_only",
       "hide_blanks": false
     }
