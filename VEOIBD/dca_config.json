@@ -22,7 +22,7 @@
       "use_annotations": false
     },
     "model_validate": {
-      "restrict_rules": true
+      "restrict_rules": false
     },
     "model_submit": {
       "use_schema_labels": true,
