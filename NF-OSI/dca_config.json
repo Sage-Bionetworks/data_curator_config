@@ -17,6 +17,9 @@
     "sidebar_col": "#191919"
   },
   "schematic": {
+    "global": {
+      "data_model_labels": "display_label"
+    },
     "manifest_generate": {
       "output_format": "google_sheet",
       "use_annotations": true
@@ -25,7 +28,6 @@
       "restrict_rules": false
     },
     "model_submit": {
-      "use_schema_labels": true,
       "table_manipulation": "replace",
       "manifest_record_type": "table_and_file",
       "hide_blanks": true,
