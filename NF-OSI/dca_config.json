@@ -28,6 +28,7 @@
       "use_schema_labels": true,
       "table_manipulation": "replace",
       "manifest_record_type": "table_and_file",
+      "data_model_labels": "display_label",
       "hide_blanks": true,
       "table_column_names":"display_label",
       "annotation_keys": "display_label"
