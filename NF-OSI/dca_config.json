@@ -17,17 +17,16 @@
     "sidebar_col": "#191919"
   },
   "schematic": {
-    "global": {
-      "data_model_labels": "display_label"
-    },
     "manifest_generate": {
       "output_format": "google_sheet",
       "use_annotations": true
     },
     "model_validate": {
-      "restrict_rules": false
+      "restrict_rules": false,
+       "data_model_labels": "class_label"
     },
     "model_submit": {
+      "data_model_labels": "class_label"
       "table_manipulation": "replace",
       "manifest_record_type": "table_and_file",
       "hide_blanks": true,
