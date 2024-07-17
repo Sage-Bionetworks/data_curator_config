@@ -26,7 +26,7 @@
        "data_model_labels": "class_label"
     },
     "model_submit": {
-      "data_model_labels": "class_label"
+      "data_model_labels": "class_label",
       "table_manipulation": "replace",
       "manifest_record_type": "table_and_file",
       "hide_blanks": true,
