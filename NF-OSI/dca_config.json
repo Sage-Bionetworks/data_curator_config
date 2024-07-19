@@ -2,9 +2,9 @@
   "dcc": {
     "name": "NF-OSI",
     "synapse_asset_view": "syn16858331",
-    "data_model_url": "https://raw.githubusercontent.com/nf-osi/nf-metadata-dictionary/v9.5.0/NF.jsonld",
+    "data_model_url": "https://raw.githubusercontent.com/nf-osi/nf-metadata-dictionary/v9.6.0/NF.jsonld",
     "data_model_info": "",
-    "template_menu_config_file": "https://raw.githubusercontent.com/nf-osi/nf-metadata-dictionary/v9.5.0/dca-template-config.json",
+    "template_menu_config_file": "https://raw.githubusercontent.com/nf-osi/nf-metadata-dictionary/v9.6.0/dca-template-config.json",
     "logo_location": "",
     "logo_link": "",
     "dcc_help_link": "",
@@ -25,7 +25,6 @@
       "restrict_rules": false
     },
     "model_submit": {
-      "use_schema_labels": true,
       "table_manipulation": "replace",
       "manifest_record_type": "table_and_file",
       "hide_blanks": true,
