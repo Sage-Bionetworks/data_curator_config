@@ -27,7 +27,7 @@
     "model_submit": {
       "use_schema_labels": true,
       "table_manipulation": "replace",
-      "manifest_record_type": "table_and_file",
+      "manifest_record_type": "file",
       "hide_blanks": false
     }
   }
