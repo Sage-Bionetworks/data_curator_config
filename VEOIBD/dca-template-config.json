@@ -18,12 +18,12 @@
     {
       "display_name": "Bulk RNAseq Assay Template",
       "schema_name": "BulkRNAseqAssayTemplate",
-      "type": "record"
+      "type": "file"
     },
     {
       "display_name": "scRNAseq Assay Template",
       "schema_name": "ScRNAseqAssayTemplate",
-      "type": "record"
+      "type": "file"
     },
     {
       "display_name": "Bulk RNAseq Raw File Annotations",
