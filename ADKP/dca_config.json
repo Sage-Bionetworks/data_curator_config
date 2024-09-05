@@ -7,8 +7,8 @@
     "template_menu_config_file": "https://raw.githubusercontent.com/adknowledgeportal/data-models/main/dca-template-config.json",
     "logo_location": "https://raw.githubusercontent.com/Sage-Bionetworks/data_curator_config/prod/ADKP/ADKnowledgePortal.png",
     "logo_link": "https://adknowledgeportal.synapse.org",
-    "dcc_help_link": "",
-    "portal_help_link": ""
+    "dcc_help_link": "https://dca-docs.scrollhelp.site/DCA/Working-version/Project-Agnostic/",
+    "portal_help_link": "https://help.adknowledgeportal.org/apd/"
   },
   "dca": {
     "use_compliance_dashboard": false,
