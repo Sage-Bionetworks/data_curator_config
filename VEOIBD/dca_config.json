@@ -19,7 +19,7 @@
   "schematic": {
     "manifest_generate": {
       "output_format": "excel",
-      "use_annotations": false
+      "use_annotations": true
     },
     "model_validate": {
       "restrict_rules": false
