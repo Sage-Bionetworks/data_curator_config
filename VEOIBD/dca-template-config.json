@@ -21,8 +21,8 @@
       "type": "file"
     },
     {
-      "display_name": "scRNAseq Assay Template",
-      "schema_name": "ScRNAseqAssayTemplate",
+      "display_name": "scRNASeq Assay Template",
+      "schema_name": "ScRNASeqAssayTemplate",
       "type": "file"
     },
     {
