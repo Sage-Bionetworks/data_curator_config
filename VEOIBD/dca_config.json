@@ -1,7 +1,7 @@
 {
   "dcc": {
     "name": "VEOIBD",
-    "synapse_asset_view": "syn51397378",
+    "synapse_asset_view": "syn62827321",
     "data_model_url": "https://raw.githubusercontent.com/VEOIBD/data_models/main/veoibd.data.model.jsonld",
     "data_model_info": "",
     "template_menu_config_file": "https://raw.githubusercontent.com/Sage-Bionetworks/data_curator_config/testing/VEOIBD/dca-template-config.json",
