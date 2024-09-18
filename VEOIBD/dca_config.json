@@ -22,7 +22,7 @@
     },
     "manifest_generate": {
       "output_format": "excel",
-      "use_annotations": true
+      "use_annotations": false
     },
     "model_validate": {
       "restrict_rules": false
