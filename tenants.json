@@ -118,6 +118,11 @@
       "name":"Data Type Not Found Test",
       "synapse_asset_view":"syn60530598",
       "config_location":"test/datatype_not_found_dca_config.json"
+    },
+    {
+      "name":"Test Filename Validation",
+      "synapse_asset_view":"syn63630107",
+      "config_location":"test/test_filename_validation_dca_config.json"
     }
   ]
 }
