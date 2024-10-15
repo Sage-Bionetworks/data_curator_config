@@ -90,6 +90,11 @@
       "config_location":"test/smoke_test_dca_config.json"
     },
     {
+      "name":"DCA Secondary Smoke Test",
+      "synapse_asset_view":"syn52701135",
+      "config_location":"test/smoke_test_secondary.json"
+    },
+    {
       "name":"DCA template type tests",
       "synapse_asset_view":"syn52786062",
       "config_location":"test/test_template_type_dca_config.json"
