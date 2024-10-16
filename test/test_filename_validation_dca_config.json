@@ -18,7 +18,7 @@
   },
   "schematic": {
     "manifest_generate": {
-      "output_format": "google_sheet",
+      "output_format": "excel",
       "use_annotations": false
     },
     "model_validate": {
