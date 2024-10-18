@@ -49,6 +49,11 @@
       "name":"DCA Demo Upsert",
       "synapse_asset_view":"syn51489635",
       "config_location":"demo_upsert/dca_config.json"
+    },
+    {
+      "name":"HTAN 2",
+      "synapse_asset_view":"syn20446927",
+      "config_location":"HTAN2/dca_config.json"
     }
   ]
 }
