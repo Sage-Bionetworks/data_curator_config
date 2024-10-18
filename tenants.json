@@ -123,6 +123,11 @@
       "name":"Test Filename Validation",
       "synapse_asset_view":"syn63630107",
       "config_location":"test/test_filename_validation_dca_config.json"
+    },
+    {
+      "name":"DCA Smoke Test Nested Folder",
+      "synapse_asset_view":"syn63836189",
+      "config_location":"test/smoke_test_secondary.json"
     }
   ]
 }
