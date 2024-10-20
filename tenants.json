@@ -26,7 +26,7 @@
       "config_location":"BTC/dca_config.json"
     },
     {
-      "name":"HTAN All Projects",
+      "name":"HTAN Phase 1 All Projects",
       "synapse_asset_view":"syn20446927",
       "config_location":"HTAN/dca_config.json"
     },
@@ -49,6 +49,11 @@
       "name":"DCA Demo Upsert",
       "synapse_asset_view":"syn51489635",
       "config_location":"demo_upsert/dca_config.json"
+    },
+    {
+      "name":"HTAN Phase 2 All Projects",
+      "synapse_asset_view":"syn20446927",
+      "config_location":"HTAN2/dca_config.json"
     }
   ]
 }
