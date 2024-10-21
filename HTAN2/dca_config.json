@@ -1,0 +1,34 @@
+{
+  "dcc": {
+    "name": "HTAN All Projects",
+    "synapse_asset_view": "syn20446927",
+    "data_model_url": "https://raw.githubusercontent.com/ncihtan/data-models/v24.9.1/HTAN.model.jsonld",
+    "data_model_info": "",
+    "template_menu_config_file": "https://raw.githubusercontent.com/ncihtan/data-models/v24.9.1/dca-template-config.json",
+    "logo_location": "https://raw.githubusercontent.com/Sage-Bionetworks/data_curator_config/prod/HTAN/HTAN_text_logo.png",
+    "logo_link": "https://humantumoratlas.org",
+    "dcc_help_link": "https://dca-docs.scrollhelp.site/DCA/Working-version/HTAN/",
+    "portal_help_link": "https://docs.humantumoratlas.org/"
+  },
+  "dca": {
+    "use_compliance_dashboard": false,
+    "primary_col": "#605ca8",
+    "secondary_col": "#5F008C",
+    "sidebar_col": "#191919"
+  },
+  "schematic": {
+    "manifest_generate": {
+      "output_format": "google_sheet",
+      "use_annotations": false
+    },
+    "model_validate": {
+      "restrict_rules": false
+    },
+    "model_submit": {
+      "use_schema_labels": true,
+      "table_manipulation": "replace",
+      "manifest_record_type": "file_only",
+      "hide_blanks": false
+    }
+  }
+}
