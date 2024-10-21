@@ -59,6 +59,11 @@
       "name":"HTAN Refresher 24-05",
       "synapse_asset_view":"syn59409218",
       "config_location":"test/htan-refresher-2405.json"
+    },
+    {
+      "name":"DCA Smoke Test Nested Folder",
+      "synapse_asset_view":"syn63836189",
+      "config_location":"test/smoke_test_secondary.json"
     }
   ]
 }
