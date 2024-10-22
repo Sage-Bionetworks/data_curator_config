@@ -1,6 +1,6 @@
 {
   "dcc": {
-    "name": "HTAN All Projects",
+    "name": "HTAN Phase 1 All Projects",
     "synapse_asset_view": "syn20446927",
     "data_model_url": "https://raw.githubusercontent.com/ncihtan/data-models/v24.9.1/HTAN.model.jsonld",
     "data_model_info": "",
