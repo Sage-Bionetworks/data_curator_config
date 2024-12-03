@@ -15,31 +15,6 @@
       "schema_name": "BiospecimenMetadataTemplate",
       "type": "record"
     },
-    {
-      "display_name": "Bulk RNAseq Assay Template",
-      "schema_name": "BulkRNAseqAssayTemplate",
-      "type": "file"
-    },
-    {
-      "display_name": "scRNASeq Assay Template",
-      "schema_name": "ScRNASeqAssayTemplate",
-      "type": "file"
-    },
-    {
-      "display_name": "Bulk RNAseq Raw File Annotations",
-      "schema_name": "BulkRNAseqRawFileAnnotations",
-      "type": "file"
-    },
-    {
-      "display_name": "Bulk RNASeq Counts File Annotations",
-      "schema_name": "BulkRNASeqCountsFileAnnotations",
-      "type": "file"
-    },
-    {
-      "display_name": "Metadata File Annotations",
-      "schema_name": "MetadataFileAnnotations",
-      "type": "file"
-    }
   ],
   "service_version": "v23.1.1",
   "schema_version": ""
