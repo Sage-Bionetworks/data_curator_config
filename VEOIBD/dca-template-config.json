@@ -14,7 +14,7 @@
       "display_name": "Biospecimen Metadata Template",
       "schema_name": "BiospecimenMetadataTemplate",
       "type": "record"
-    },
+    }
   ],
   "service_version": "v23.1.1",
   "schema_version": ""
