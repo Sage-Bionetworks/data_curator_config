@@ -11,9 +11,9 @@ on:
       - 'schemas/dca_template_config.schema.json'
   pull_request:
     branches:
-      - 'main'
+      - 'prod'
       - 'staging'
-      - 'staging-update'
+      - 'testing'
       - 'dev'
     paths:
       - '*/*dca-template-config.json'
