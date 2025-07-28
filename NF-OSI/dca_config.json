@@ -2,9 +2,9 @@
   "dcc": {
     "name": "NF-OSI",
     "synapse_asset_view": "syn16858331",
-    "data_model_url": "https://raw.githubusercontent.com/nf-osi/nf-metadata-dictionary/v10.02.0/NF.jsonld",
+    "data_model_url": "https://raw.githubusercontent.com/nf-osi/nf-metadata-dictionary/v10.04.0/NF.jsonld",
     "data_model_info": "For data model issues, most preferred is to create an issue directly at https://github.com/nf-osi/nf-metadata-dictionary/issues (for those with GitHub accounts). Otherwise, and for most other support, use https://sagebionetworks.jira.com/servicedesk/customer/portal/2/group/2 or email us at nf-osi@sagebionetworks.org.",
-    "template_menu_config_file": "https://raw.githubusercontent.com/nf-osi/nf-metadata-dictionary/v10.02.0/dca-template-config.json",
+    "template_menu_config_file": "https://raw.githubusercontent.com/nf-osi/nf-metadata-dictionary/v10.04.0/dca-template-config.json",
     "logo_location": "",
     "logo_link": "",
     "dcc_help_link": "",
