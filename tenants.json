@@ -11,11 +11,6 @@
       "config_location":"MC2/dca_config.json"
     },
     {
-      "name":"AD Knowledge Portal",
-      "synapse_asset_view":"syn51324810",
-      "config_location":"ADKP/dca_config.json"
-    },
-    {
       "name":"VEOIBD",
       "synapse_asset_view":"syn51397378",
       "config_location":"VEOIBD/dca_config.json"
@@ -34,11 +29,6 @@
       "name":"NF-OSI",
       "synapse_asset_view":"syn16858331",
       "config_location":"NF-OSI/dca_config.json"
-    },
-    {
-      "name":"EL",
-      "synapse_asset_view":"syn51753858",
-      "config_location":"EL/dca_config.json"
     },
     {
       "name":"DCA Demo Upsert",
