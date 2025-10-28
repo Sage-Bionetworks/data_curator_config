@@ -16,16 +16,6 @@
       "config_location":"VEOIBD/dca_config.json"
     },
     {
-      "name":"BTC DCC",
-      "synapse_asset_view":"syn51407795",
-      "config_location":"BTC/dca_config.json"
-    },
-    {
-      "name":"Gray Foundation",
-      "synapse_asset_view":"syn28142805",
-      "config_location":"GF/dca_config.json"
-    },
-    {
       "name":"NF-OSI",
       "synapse_asset_view":"syn16858331",
       "config_location":"NF-OSI/dca_config.json"
