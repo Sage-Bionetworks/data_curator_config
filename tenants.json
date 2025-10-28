@@ -11,11 +11,6 @@
       "config_location":"MC2/dca_config.json"
     },
     {
-      "name":"AD Knowledge Portal",
-      "synapse_asset_view":"syn51324810",
-      "config_location":"ADKP/dca_config.json"
-    },
-    {
       "name":"VEOIBD",
       "synapse_asset_view":"syn51397378",
       "config_location":"VEOIBD/dca_config.json"
@@ -24,11 +19,6 @@
       "name":"BTC DCC",
       "synapse_asset_view":"syn51407795",
       "config_location":"BTC/dca_config.json"
-    },
-    {
-      "name":"HTAN All Projects",
-      "synapse_asset_view":"syn20446927",
-      "config_location":"HTAN/dca_config.json"
     },
     {
       "name":"Gray Foundation",
@@ -41,11 +31,6 @@
       "config_location":"NF-OSI/dca_config.json"
     },
     {
-      "name":"EL",
-      "synapse_asset_view":"syn51753858",
-      "config_location":"EL/dca_config.json"
-    },
-    {
       "name":"DCA Demo Upsert",
       "synapse_asset_view":"syn51489635",
       "config_location":"demo_upsert/dca_config.json"
@@ -56,19 +41,9 @@
       "config_location":"test/smoke_test_dca_config.json"
     },
     {
-      "name":"HTAN Refresher 24-05",
-      "synapse_asset_view":"syn59409218",
-      "config_location":"test/htan-refresher-2405.json"
-    },
-    {
       "name":"DCA Smoke Test Nested Folder",
       "synapse_asset_view":"syn63836189",
       "config_location":"test/smoke_test_secondary.json"
     },
-    {
-      "name":"AMP AIM",
-      "synapse_asset_view":"syn64332440",
-      "config_location":"AMP-AIM/dca_config.json"
-    }
   ]
 }
