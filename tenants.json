@@ -6,11 +6,6 @@
       "config_location":"demo/dca_config.json"
     },
     {
-      "name":"Cancer Complexity Knowledge Portal - Database",
-      "synapse_asset_view":"syn27210848",
-      "config_location":"MC2/dca_config.json"
-    },
-    {
       "name":"VEOIBD",
       "synapse_asset_view":"syn51397378",
       "config_location":"VEOIBD/dca_config.json"
