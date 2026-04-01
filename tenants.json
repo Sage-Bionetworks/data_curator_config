@@ -14,11 +14,6 @@
       "name":"NF-OSI",
       "synapse_asset_view":"syn16858331",
       "config_location":"NF-OSI/dca_config.json"
-    },
-    {
-      "name":"DCA Demo Upsert",
-      "synapse_asset_view":"syn51489635",
-      "config_location":"demo_upsert/dca_config.json"
     }
   ]
 }
