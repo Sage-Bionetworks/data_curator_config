@@ -1,11 +1,6 @@
 {
   "tenants": [
     {
-      "name":"DCA Demo",
-      "synapse_asset_view":"syn33715412",
-      "config_location":"demo/dca_config.json"
-    },
-    {
       "name":"VEOIBD",
       "synapse_asset_view":"syn51397378",
       "config_location":"VEOIBD/dca_config.json"
