@@ -51,8 +51,10 @@ jobs:
 
       - name: Set Configurations for Schematic
         shell: bash
+        env:
+          SYNAPSE_CONFIG: ${{ secrets.SCHEMATIC_SYNAPSE_CONFIG }}
         run: |
-          echo "${{ secrets.SCHEMATIC_SYNAPSE_CONFIG }}" > schematic/.synapseConfig
+          printf '%s\n' "$SYNAPSE_CONFIG" > schematic/.synapseConfig
 
       - name: Save service account credentials for Schematic
         id: create-json
@@ -61,27 +63,66 @@ jobs:
           name: 'schematic/schematic_service_account_creds.json'
           json: ${{ secrets.SCHEMATIC_SERVICE_ACCT_CREDS }}
           
+      # The dispatch payload / workflow inputs are untrusted: they must never be
+      # interpolated into a run: block with ${{ }}. They are passed in as env
+      # vars, validated, and only then written to $GITHUB_ENV.
       - name: Set variables for schematic
         shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          DISPATCH_DATA_MODEL: ${{ github.event.client_payload.data_model }}
+          DISPATCH_DATA_TYPES: ${{ github.event.client_payload.data_types }}
+          DISPATCH_COMMUNITY_DIR: ${{ github.event.client_payload.community_dir }}
+          INPUT_DATA_MODEL: ${{ inputs.data_model }}
+          INPUT_DATA_TYPES: ${{ inputs.data_types }}
+          INPUT_COMMUNITY_DIR: ${{ inputs.community_dir }}
         run: |
-          echo ${{ github.event_name }}
-          if ${{ github.event_name == 'repository_dispatch' }}
-          then
-            echo Using variables from repository_dispatch
-            echo 'data_model=${{ github.event.client_payload.data_model }}' >> $GITHUB_ENV
-            echo 'data_types=${{ github.event.client_payload.data_types }}' >> $GITHUB_ENV
-            echo 'community_dir=${{ github.event.client_payload.community_dir }}' >> $GITHUB_ENV
+          set -euo pipefail
+          if [[ "$EVENT_NAME" == "repository_dispatch" ]]; then
+            echo "Using variables from repository_dispatch"
+            data_model="$DISPATCH_DATA_MODEL"
+            data_types="$DISPATCH_DATA_TYPES"
+            community_dir="$DISPATCH_COMMUNITY_DIR"
           else
-            echo Using variables from manual input
-            echo 'data_model=${{ inputs.data_model }}' >> $GITHUB_ENV
-            echo 'data_types=${{ inputs.data_types }}' >> $GITHUB_ENV
-            echo 'community_dir=${{ inputs.community_dir }}' >> $GITHUB_ENV
+            echo "Using variables from manual input"
+            data_model="$INPUT_DATA_MODEL"
+            data_types="$INPUT_DATA_TYPES"
+            community_dir="$INPUT_COMMUNITY_DIR"
           fi
-          
+
+          # reject anything that is not a whitespace-free http(s) URL -- an
+          # embedded newline would let the payload set arbitrary $GITHUB_ENV vars
+          if [[ ! "$data_model" =~ ^https?://[^[:space:]]+$ ]]; then
+            echo "::error::data_model must be an http(s) URL with no whitespace"
+            exit 1
+          fi
+          # a quote or backslash would break out of the JSON string the
+          # yaml-update-action step builds from this value
+          if [[ "$data_model" == *'"'* || "$data_model" == *'\'* ]]; then
+            echo "::error::data_model must not contain quotes or backslashes"
+            exit 1
+          fi
+          # a relative path under the repo, no traversal, no shell metacharacters
+          if [[ ! "$community_dir" =~ ^[A-Za-z0-9._/-]+$ || "$community_dir" == /* || "$community_dir" == *..* ]]; then
+            echo "::error::community_dir must be a relative path of [A-Za-z0-9._/-] with no '..'"
+            exit 1
+          fi
+          # space-separated schema names, may be empty
+          if [[ ! "$data_types" =~ ^[A-Za-z0-9\ _-]*$ ]]; then
+            echo "::error::data_types must be space-separated names of [A-Za-z0-9_-]"
+            exit 1
+          fi
+
+          printf '%s\n' "data_model=$data_model" >> "$GITHUB_ENV"
+          printf '%s\n' "data_types=$data_types" >> "$GITHUB_ENV"
+          printf '%s\n' "community_dir=$community_dir" >> "$GITHUB_ENV"
+
       - name: Download data model
+        shell: bash
         run: |
-          curl ${{ env.data_model }} > schematic/data-model.jsonld
-          
+          set -euo pipefail
+          curl -fsSL "$data_model" -o schematic/data-model.jsonld
+
       - uses: fjogeleit/yaml-update-action@main
         with:
           commitChange: false
@@ -93,31 +134,48 @@ jobs:
             }
 
       - name: Make template directory
+        shell: bash
         run: |
-          mkdir -p ${{ env.community_dir }}/templates
-          
+          set -euo pipefail
+          mkdir -p "$community_dir/templates"
+
       - name: Set Configurations for Data Model
+        shell: bash
         run: |
+         set -euo pipefail
          cd schematic
          poetry run python3 ../.github/config_schema.py \
            -c config.yml \
            --service_repo 'Sage-Bionetworks/schematic' \
            -o ../ \
            --overwrite
-         cp ../config.json "../${{ env.community_dir }}/dca-template-config.json"
+         cp ../config.json "../$community_dir/dca-template-config.json"
 
       - name: Get template types to generate
         if: "${{ env.data_types == '' }}"
         id: data_types
+        shell: bash
         run: |
-          echo "data_types=$(jq -r '[.manifest_schemas[].schema_name] | join(" ")' config.json)" >> $GITHUB_ENV
+          set -euo pipefail
+          # schema names come from the (untrusted) data model, so keep only the
+          # ones safe to word-split below and to write to $GITHUB_ENV
+          all=$(jq -r '[.manifest_schemas[].schema_name] | length' config.json)
+          data_types=$(jq -r '[.manifest_schemas[].schema_name
+            | select(test("^[A-Za-z0-9_-]+$"))] | join(" ")' config.json)
+          kept=$(wc -w <<< "$data_types" | tr -d ' ')
+          if [[ "$kept" != "$all" ]]; then
+            echo "::warning::skipped $((all - kept)) schema_name(s) with unsupported characters"
+          fi
+          printf '%s\n' "data_types=$data_types" >> "$GITHUB_ENV"
 
       - name: Generate templates
+        shell: bash
         run: |
           cd schematic
-          for i in ${{ env.data_types }};
+          # unquoted on purpose: data_types is a validated space-separated list
+          for i in $data_types;
           do
-            poetry run schematic manifest -c config.yml get -dt "$i" -oxlsx "../${{ env.community_dir }}/templates/$i.xlsx" || continue
+            poetry run schematic manifest -c config.yml get -dt "$i" -oxlsx "../$community_dir/templates/$i.xlsx" || continue
           done
          
       - name: Open PR
